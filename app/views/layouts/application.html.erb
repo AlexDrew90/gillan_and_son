@@ -16,7 +16,9 @@
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
+    <% if current_page?(root_path) %>
     <%= render "shared/banner" %>
+    <% end  %>
     <div class="wrapper">
         <%= yield %>
     </div>
