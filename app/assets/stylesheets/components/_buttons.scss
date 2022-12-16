@@ -7,6 +7,13 @@
   font-weight: bold;
   border-radius: 10px;
   font-size: 1.5rem;
+  border: none;
+}
+
+.button-primary:hover{
+  text-decoration: none;
+  background-color: #bbe7fe;
+  color: #0A0C31;
 }
 
 .button-div{
