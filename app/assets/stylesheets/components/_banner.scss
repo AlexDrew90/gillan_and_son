@@ -1,26 +1,27 @@
 .home-banner{
-  background-image: linear-gradient(to right, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.2) 90%), url(kitchen-main.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 20vh 0;
-  color: rgb(255, 255, 255);
+  padding: 10vh 0;
+  color: #0A0C31;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .home-banner-text{
-  width: 90vw;
   padding-right: 20vw;
   h1{
+    width: 100%;
     font-weight: bolder;
     font-family: 'Assistant', sans-serif;
     font-size: 5rem;
   }
   h3{
+    width: 100%;
     font-weight: lighter;
     font-family: 'Assistant', sans-serif;
     font-size: 3rem;
   }
+}
+
+.home-banner-image{
+  border-radius: 15px;
+  width: 35vw;
 }
