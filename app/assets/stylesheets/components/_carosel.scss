@@ -1,0 +1,14 @@
+// .swiper-wrapper{
+//   background-color: white;
+//   border-radius: 10px;
+//   width: 50vw;
+// }
+.swiper-slide {
+  height: 250px;
+  width: 50vw;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+}
