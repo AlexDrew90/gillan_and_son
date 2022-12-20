@@ -5,8 +5,10 @@ export default class extends Controller {
   connect() {
     new Typed(this.element, {
       strings: ["to your kitchen"],
+      startDelay: 200,
       typeSpeed: 100,
-      loop: true
+      loop: false,
+      showCursor: false
     })
   }
 }
