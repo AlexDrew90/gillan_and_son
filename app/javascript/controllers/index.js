@@ -14,7 +14,7 @@ import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
 
 import { Application } from "stimulus"
-import Carousel from "./stimulus-carousel"
+import Carousel from "stimulus-carousel"
 
 const application = Application.start()
 application.register("carousel", Carousel)
