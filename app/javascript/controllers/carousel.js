@@ -1,11 +1,4 @@
-import { Controller } from "@hotwired/stimulus"
 import Carousel from "stimulus-carousel"
+export default class extends Carousel {
 
-const application = Application.start()
-application.register("carousel", Carousel)
-
-export default class extends Controller {
-  connect() {
-    console.log("HELLOOO!!!!");
-  }
 }
