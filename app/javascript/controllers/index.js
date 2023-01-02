@@ -13,8 +13,5 @@ application.register("navbar", NavbarController)
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
 
-import { Application } from '@hotwired/stimulus'
-import Carousel from 'stimulus-carousel'
-
-const application = Application.start()
+import Carousel from './carousel_controller'
 application.register('carousel', Carousel)
