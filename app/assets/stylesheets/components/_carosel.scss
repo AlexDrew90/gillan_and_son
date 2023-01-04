@@ -5,10 +5,14 @@
 // }
 .swiper-slide {
   height: 250px;
-  width: 100vw;
+  width: 80vw;
   display: flex;
   align-items:center;
   justify-content: center;
   background-color: white;
   border-radius: 10px;
+}
+
+.hide-carousel{
+  visibility: hidden;
 }
