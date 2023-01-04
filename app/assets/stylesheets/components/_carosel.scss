@@ -3,14 +3,25 @@
 //   border-radius: 10px;
 //   width: 50vw;
 // }
-.swiper-slide {
-  height: 250px;
+
+.carousel-container{
+  height: 20vh;
+}
+.carousel-wrapper{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide{
+  height: 100%;
   width: 80vw;
-  display: flex;
-  align-items:center;
-  justify-content: center;
+  position: absolute;
+  left: 10VW;
   background-color: white;
   border-radius: 10px;
+  text-align: center;
 }
 
 .hide-carousel{
