@@ -17,9 +17,9 @@
 
 .carousel-slide{
   height: 100%;
-  width: 80vw;
   position: absolute;
-  left: 10VW;
+  left: 10vw;
+  right: 10vw;
   background-color: white;
   border-radius: 10px;
   text-align: center;
@@ -35,14 +35,15 @@
   transform: translateY(50%);
   background: transparent;
   border: none;
+  z-index: 10;
 }
 
 .carousel-arrow-right{
- right: 5vw;
+ right: 4vw;
 }
 
 .carousel-arrow-left{
-  left: 5vw;
+  left: 4vw;
  }
 
  .fa-chevron-left{
