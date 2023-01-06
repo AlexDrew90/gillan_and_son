@@ -35,22 +35,22 @@
   </div>
 </div>
 
-<div class="home-testimonial-section">
+<div class="home-testimonial-section" data-controller="carousel">
   <h3 class="home-header">Testimonials</h3>
-  <div data-controller="carousel" class="carousel-container">
+  <div class="carousel-container">
     <button class = "carousel-arrow carousel-arrow-left" data-action="click->carousel#left"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
       <div class="carousel-track-wrapper">
         <ul class="carousel-track">
-            <li class="carousel-slide corousel-one">Slide 1</li>
-            <li class="carousel-slide carousel-two hide-carousel" data-action="click->carousel-tile#two" data-carousel-tile-target="two">Slide 2</li>
-            <li class="carousel-slide carousel-three hide-carousel" data-action="click->carousel-tile#three" data-carousel-tile-target="three">Slide 3</li>
+            <li class="carousel-slide corousel-one" data-carousel-target="slideone">Slide 1</li>
+            <li class="carousel-slide carousel-two hide-carousel" data-carousel-target="slidetwo">Slide 2</li>
+            <li class="carousel-slide carousel-three hide-carousel" data-carousel-target="slidethree">Slide 3</li>
         </ul>
       </div>
     <button class = "carousel-arrow carousel-arrow-right" data-action="click->carousel#right"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
   </div>
   <div class="carousel-nav">
-      <button class="carousel-indicator indicator-one"></button>
-      <button class="carousel-indicator indicator-two"></button>
-      <button class="carousel-indicator indicator-three"></button>
+      <button class="carousel-indicator indicator-one" data-action="click->carousel#indicatorOne"></button>
+      <button class="carousel-indicator indicator-two" data-action="click->carousel#indicatorTwo"></button>
+      <button class="carousel-indicator indicator-three" data-action="click->carousel#indicatorThree"></button>
     </div>
 </div>
