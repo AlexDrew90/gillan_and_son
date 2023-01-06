@@ -29,6 +29,10 @@
   visibility: hidden;
 }
 
+.active-indicator{
+  background: rgba(0,0,0,.8) !important;
+}
+
 .carousel-arrow{
   position: absolute;
   top: 40%;
