@@ -10,13 +10,43 @@ connect() {
   }
 
   left() {
-    console.log("left");
-    const activeSlide = this.element.querySelector(".active-slide");
-    console.log(activeSlide.parentElement);
+    let activeSlide = this.element.querySelector(".active-slide");
+    let activeIndicator = this.element.querySelector(".active-indicator");
+    const carouselTrack = activeSlide.parentElement;
+    const slideArray = Array.from(carouselTrack.children);
+    const indicatorTrack = this.element.querySelector(".carousel-nav");
+    const indicatorArray = Array.from(indicatorTrack.children);
+    const length = slideArray.length;
+    let currentSlideIndex = slideArray.indexOf(activeSlide);
+    let currentIndicatorIndex = indicatorArray.indexOf(activeIndicator);
+    activeSlide.classList.remove("active-slide");
+    activeSlide.classList.add("hide-carousel");
+    activeIndicator.classList.remove("active-indicator");
+    let slideToLeft = slideArray[(currentSlideIndex+length-1)%length];
+    let indicatorToLeft = indicatorArray[(currentIndicatorIndex+length-1)%length];
+    slideToLeft.classList.add("active-slide");
+    slideToLeft.classList.remove("hide-carousel");
+    indicatorToLeft.classList.add("active-indicator");
   }
 
   right() {
-    console.log("right");
+    let activeSlide = this.element.querySelector(".active-slide");
+    let activeIndicator = this.element.querySelector(".active-indicator");
+    const carouselTrack = activeSlide.parentElement;
+    const slideArray = Array.from(carouselTrack.children);
+    const indicatorTrack = this.element.querySelector(".carousel-nav");
+    const indicatorArray = Array.from(indicatorTrack.children);
+    const length = slideArray.length;
+    let currentSlideIndex = slideArray.indexOf(activeSlide);
+    let currentIndicatorIndex = indicatorArray.indexOf(activeIndicator);
+    activeSlide.classList.remove("active-slide");
+    activeSlide.classList.add("hide-carousel");
+    activeIndicator.classList.remove("active-indicator");
+    let slideToRight = slideArray[(currentSlideIndex+1)%length];
+    let indicatorToRight = indicatorArray[(currentIndicatorIndex+1)%length];
+    slideToRight.classList.add("active-slide");
+    slideToRight.classList.remove("hide-carousel");
+    indicatorToRight.classList.add("active-indicator");
   }
 
   indicatorOne() {
