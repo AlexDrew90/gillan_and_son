@@ -11,6 +11,8 @@ connect() {
 
   left() {
     console.log("left");
+    const activeSlide = this.element.querySelector(".active-slide");
+    console.log(activeSlide.parentElement);
   }
 
   right() {
@@ -20,8 +22,11 @@ connect() {
   indicatorOne() {
     console.log("one");
     this.slideoneTarget.classList.remove("hide-carousel");
+    this.slideoneTarget.classList.add("active-slide");
     this.slidetwoTarget.classList.add("hide-carousel");
+    this.slidetwoTarget.classList.remove("active-slide");
     this.slidethreeTarget.classList.add("hide-carousel");
+    this.slidethreeTarget.classList.remove("active-slide");
     this.indicatoroneTarget.classList.add("active-indicator");
     this.indicatortwoTarget.classList.remove("active-indicator");
     this.indicatorthreeTarget.classList.remove("active-indicator");
@@ -31,8 +36,11 @@ connect() {
   indicatorTwo() {
     console.log("two");
     this.slidetwoTarget.classList.remove("hide-carousel");
+    this.slidetwoTarget.classList.add("active-slide");
     this.slideoneTarget.classList.add("hide-carousel");
+    this.slideoneTarget.classList.remove("active-slide");
     this.slidethreeTarget.classList.add("hide-carousel");
+    this.slidethreeTarget.classList.remove("active-slide");
     this.indicatortwoTarget.classList.add("active-indicator");
     this.indicatoroneTarget.classList.remove("active-indicator");
     this.indicatorthreeTarget.classList.remove("active-indicator");
@@ -41,8 +49,11 @@ connect() {
   indicatorThree() {
     console.log("three");
     this.slidethreeTarget.classList.remove("hide-carousel");
+    this.slidethreeTarget.classList.add("active-slide");
     this.slideoneTarget.classList.add("hide-carousel");
+    this.slideoneTarget.classList.remove("active-slide");
     this.slidetwoTarget.classList.add("hide-carousel");
+    this.slidetwoTarget.classList.remove("active-slide");
     this.indicatorthreeTarget.classList.add("active-indicator");
     this.indicatoroneTarget.classList.remove("active-indicator");
     this.indicatortwoTarget.classList.remove("active-indicator");
