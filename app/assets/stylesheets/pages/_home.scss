@@ -12,17 +12,20 @@
 .home-subheaders{
   width: 100%;
   text-align: center;
+  font-size: 2rem;
 }
 
 .icon-text{
   width: 100%;
   text-align: center;
+  font-size: 1.4rem;
+  margin-top: 15px;
 }
 
 .home-header{
   text-align: center;
   margin: 20px;
-  font-weight: bold;
+  font-size: 3rem;
 }
 
 .home-about-section{
@@ -36,4 +39,35 @@
 
 .home-testimonial-section{
   padding: 3vh 0 3vh 0;
+}
+
+.home-team-section{
+  background-color: #FDF9FA;
+  padding: 5vh 0 5vh 0;
+}
+
+.avatar-home{
+  height: 80px;
+  width: 80px;
+  background-size: 100% auto;
+  border-radius: 50px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.team-names{
+  margin-top: 15px;
+}
+
+.team-text{
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  /* For a screen < 720px, this CSS will be read */
+  .home-icon-with-text {
+    padding: 2vh 4vw 2vh 4vw;
+  }
 }
