@@ -34,3 +34,11 @@
     z-index: 22;
   }
 }
+
+@media (max-width: 768px) {
+  /* For a screen < 720px, this CSS will be read */
+  .button-div{
+    padding-left: 5vw;
+  }
+
+}
