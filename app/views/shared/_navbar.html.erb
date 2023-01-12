@@ -2,11 +2,11 @@
   <div class="navbar-wrap">
     <div class="navbar-logo"><p>Gillan<br>& son</p>
     </div>
-      <div class="dropdown-element">
-        <button type="button" class="dropdown-button" aria-expanded="false" aria-controls="sweets-dropdown">
-          <i class="nav-icon fa-solid fa-bars fa-3x"></i>
+      <div class="dropdown-element" data-controller="navlist">
+        <button type="button" class="dropdown-button">
+          <i class="nav-icon fa-solid fa-bars fa-3x" data-action="click->navlist#list" data-navlist-target="icon"></i>
         </button>
-        <ul class="navbar-links">
+        <ul class="navbar-links hide-nav-list" data-navlist-target="menu">
           <li class="home-button-nav">Home</li>
           <li>Our work</li>
           <li>Materials</li>

@@ -15,3 +15,6 @@ application.register("typed-js", TypedJsController)
 
 import CarouselController from "./carousel_controller"
 application.register("carousel", CarouselController)
+
+import NavlistController from "./navlist_controller"
+application.register("navlist", NavlistController)
