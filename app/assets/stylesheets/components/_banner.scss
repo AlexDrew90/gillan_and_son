@@ -26,6 +26,8 @@
 .home-banner-image{
   border-radius: 15px;
   width: 35vw;
+  height: 38vh;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
