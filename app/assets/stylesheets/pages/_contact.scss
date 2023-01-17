@@ -14,18 +14,16 @@
   padding: 20px;
 }
 
-.contact-info-top{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .contact-info-left{
   text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 30vh;
 }
 
 .contact-info-right{
   text-align: center;
+  height: 30vh;
 }
 
 .contact-info{
