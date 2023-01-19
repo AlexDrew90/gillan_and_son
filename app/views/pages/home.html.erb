@@ -1,5 +1,5 @@
 <%= render "shared/banner" %>
-<div class="home-about-section">
+<div class="home-about-section" data-controller="icon" data-action="scroll@window->icon#iconAnimateHourglassBottom">
   <h3 class="home-header">About us</h3>
   <div class="container">
     <div class="row">
@@ -26,7 +26,14 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 home-icon-with-text">
             <div>
-                <div class="hourglass-icon home-icons"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.1 512"><defs><style>.cls-1{fill:#0a1045;}</style></defs><g id="main-hourglass"><path class="cls-1" d="M0,32A32,32,0,0,1,32,0H352a32,32,0,0,1,0,64V75a160,160,0,0,1-46.9,113.1L237.3,256l67.9,67.9A160,160,0,0,1,352.1,437v11a32,32,0,0,1,0,64H32a32,32,0,0,1,0-64V437A160,160,0,0,1,78.9,323.9L146.7,256,78.9,188.1A160,160,0,0,1,32,75V64A32,32,0,0,1,0,32ZM96,64V75a96,96,0,0,0,28.1,67.9L192,210.7l67.9-67.9A96,96,0,0,0,288,74.9V64Zm0,384H288V437a96,96,0,0,0-28.1-67.9L192,301.3l-67.9,67.9A96,96,0,0,0,96,437.1V448Z" transform="translate(0 0)"/></g><g id="top-hourglass"><rect class="cls-1" x="115.07" y="137.35" width="163.25" height="78.35"/></g><g id="bottom-hourglass"><rect class="cls-1" x="82" y="400.17" width="225" height="62.72"/></g></svg></div>
+                <div class="hourglass-icon home-icons">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.1 512">
+                    <defs>
+                      <style>.cls-1{fill:#0a1045;}</style>
+                    </defs>
+                    <g id="main-hourglass"><path class="cls-1" d="M0,32A32,32,0,0,1,32,0H352a32,32,0,0,1,0,64V75a160,160,0,0,1-46.9,113.1L237.3,256l67.9,67.9A160,160,0,0,1,352.1,437v11a32,32,0,0,1,0,64H32a32,32,0,0,1,0-64V437A160,160,0,0,1,78.9,323.9L146.7,256,78.9,188.1A160,160,0,0,1,32,75V64A32,32,0,0,1,0,32ZM96,64V75a96,96,0,0,0,28.1,67.9L192,210.7l67.9-67.9A96,96,0,0,0,288,74.9V64Zm0,384H288V437a96,96,0,0,0-28.1-67.9L192,301.3l-67.9,67.9A96,96,0,0,0,96,437.1V448Z" transform="translate(0 0)"/></g><g id="top-hourglass" data-action="scroll@window->icon#iconAnimateHourglassTop" data-icon-target="hourglass-top"><rect class="cls-1" x="115.07" y="137.35" width="163.25" height="78.35"/></g><g id="bottom-hourglass" data-icon-target="hourglass-bottom"><rect class="cls-1" x="82" y="500" width="225" height="62.72"/></g>
+                  </svg>
+                </div>
                 <%# <i class="fa-solid fa-hourglass fa-3x home-icons"></i> %>
                 <h3 class="home-subheaders">A wealth of experience</h3>
                 <p class="icon-text"><strong>Over 20 years' experience</strong> installing kitchen work tops and fitting kitchens. We have worked on both
