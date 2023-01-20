@@ -10,7 +10,8 @@ export default class extends Controller {
   }
   iconAnimateHourglassTop() {
     let topPart = document.getElementById("top-hourglass");
-    if (window.scrollY >= (250)) {
+    let rect =topPart.getBoundingClientRect();
+    if (rect.top <= (500)) {
       topPart.classList.add("top-hourglass-empty");
     } else{
       topPart.classList.remove("top-hourglass-empty");
@@ -19,7 +20,9 @@ export default class extends Controller {
 
   iconAnimateHourglassBottom() {
     let bottomPart = document.getElementById("bottom-hourglass");
-    if (window.scrollY >= (250)) {
+    let topPart = document.getElementById("top-hourglass");
+    let rect =topPart.getBoundingClientRect();
+    if (rect.top <= (500)) {
       bottomPart.classList.add("bottom-hourglass-fill");
     }else{
       bottomPart.classList.remove("bottom-hourglass-fill");
