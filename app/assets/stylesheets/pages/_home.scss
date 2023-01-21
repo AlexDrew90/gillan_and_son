@@ -99,6 +99,20 @@
   }
 }
 
+.stamp-up{
+  transform: translate(0px,0px);
+  transition: 2s;
+}
+
+.stamp-down{
+  transform: translate(0px,90px);
+  transition: 0.5s;
+}
+
+// .ink-hidden{
+//   visibility: hidden;
+// }
+
 @media (max-width: 768px) {
   /* For a screen < 720px, this CSS will be read */
   .home-icon-with-text {
