@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="navbar"
 export default class extends Controller {
 
-  static targets = [ "hourglass-top", "hourglass-bottom", "main-stamp", "stamp-ink" ]
+  static targets = [ "hourglass-top", "hourglass-bottom", "main-stamp", "award-number" ]
 
   connect() {
     console.log("icons");
@@ -48,14 +48,14 @@ export default class extends Controller {
 
   }
 
-  iconAnimateStampInk() {
-    let inkPart  = document.getElementById("ink");
-    let mainPart = document.getElementById("main-stamp");
+  iconAnimateAwardNumber() {
+    let numberPart  = document.getElementById("award_one");
+    let mainPart = document.getElementById("award-main");
     let rect =mainPart.getBoundingClientRect();
     if (rect.top <= (500)) {
-        // inkPart.classList.remove("ink-hidden");
+        numberPart.classList.remove("number-hidden");
     } else{
-      inkPart.classList.add("ink-hidden");
+      numberPart.classList.add("number-hidden");
     }
   }
 }

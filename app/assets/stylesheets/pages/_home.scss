@@ -6,22 +6,19 @@
   text-align: center;
   color: #0A1045;
   padding: 20px;
+  svg{
+    height: 4rem;
+  }
 }
 
 .hourglass-icon{
   width: 100%;
   text-align: center;
-  svg{
-    height: 3rem;
-  }
 }
 
 .stamp-icon{
   width: 100%;
   text-align: center;
-  svg{
-    height: 3rem;
-  }
 }
 
 .home-subheaders{
@@ -109,9 +106,10 @@
   transition: 0.5s;
 }
 
-// .ink-hidden{
-//   visibility: hidden;
-// }
+.number-hidden{
+  visibility: hidden;
+  transition: 2s;
+}
 
 @media (max-width: 768px) {
   /* For a screen < 720px, this CSS will be read */
