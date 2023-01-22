@@ -113,6 +113,21 @@
   transition: 2s;
 }
 
+.rotate-award-clockwise{
+  width: 100%;
+  transform-origin: center 39%;
+  animation: rotation 3s 1 linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 @media (max-width: 768px) {
   /* For a screen < 720px, this CSS will be read */
   .home-icon-with-text {
