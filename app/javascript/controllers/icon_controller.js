@@ -33,7 +33,6 @@ export default class extends Controller {
 
     let mainPart = document.getElementById("main-stamp");
     let rect =mainPart.getBoundingClientRect();
-    console.log(rect.top);
     if (rect.top <= (500)) {
       mainPart.classList.remove("stamp-up");
       mainPart.classList.add("stamp-down");
@@ -41,7 +40,7 @@ export default class extends Controller {
       mainPart.classList.remove("stamp-down");
       mainPart.classList.add("stamp-up");
     }
-    if (rect.top < (450)) {
+    if (rect.top < (400)) {
       mainPart.classList.add("stamp-up");
       mainPart.classList.remove("stamp-down");
     }
@@ -54,6 +53,7 @@ export default class extends Controller {
     let rect =mainPart.getBoundingClientRect();
     if (rect.top <= (500)) {
         numberPart.classList.remove("number-hidden");
+        numberPart.classList.add("number-visible");
     } else{
       numberPart.classList.add("number-hidden");
     }

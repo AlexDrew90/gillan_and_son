@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 
-
 .home-icons{
   width: 100%;
   text-align: center;
@@ -88,7 +87,6 @@
   }
 }
 
-
 .bottom-hourglass-fill{
   rect{
     y: 370;
@@ -108,6 +106,10 @@
 
 .number-hidden{
   visibility: hidden;
+}
+
+.number-visible{
+  visibility: visible;
   transition: 2s;
 }
 
