@@ -11,7 +11,7 @@ export default class extends Controller {
   iconAnimateHourglassTop() {
     let topPart = document.getElementById("top-hourglass");
     let rect =topPart.getBoundingClientRect();
-    if (rect.top <= (500)) {
+    if (rect.top <= (450)) {
       topPart.classList.add("top-hourglass-empty");
     } else{
       topPart.classList.remove("top-hourglass-empty");
@@ -22,7 +22,7 @@ export default class extends Controller {
     let bottomPart = document.getElementById("bottom-hourglass");
     let topPart = document.getElementById("top-hourglass");
     let rect =topPart.getBoundingClientRect();
-    if (rect.top <= (500)) {
+    if (rect.top <= (450)) {
       bottomPart.classList.add("bottom-hourglass-fill");
     }else{
       bottomPart.classList.remove("bottom-hourglass-fill");
@@ -33,29 +33,30 @@ export default class extends Controller {
 
     let mainPart = document.getElementById("main-stamp");
     let rect =mainPart.getBoundingClientRect();
-    if (rect.top <= (500)) {
+    if (rect.top <= (450)) {
       mainPart.classList.remove("stamp-up");
       mainPart.classList.add("stamp-down");
     } else{
       mainPart.classList.remove("stamp-down");
       mainPart.classList.add("stamp-up");
     }
-    if (rect.top < (400)) {
+    if (rect.top < (350)) {
       mainPart.classList.add("stamp-up");
       mainPart.classList.remove("stamp-down");
     }
 
   }
 
-  iconAnimateAwardNumber() {
-    let numberPart  = document.getElementById("award_one");
+  iconAnimateRosette() {
+    let rosettePart  = document.getElementById("rosette");
     let mainPart = document.getElementById("award-main");
     let rect =mainPart.getBoundingClientRect();
-    if (rect.top <= (500)) {
-        numberPart.classList.remove("number-hidden");
-        numberPart.classList.add("number-visible");
+    if (rect.top <= (450)) {
+        rosettePart.classList.add("rotate-award-clockwise");
+        rosettePart.classList.remove("rotate-award-anticlockwise");
     } else{
-      numberPart.classList.add("number-hidden");
+      rosettePart.classList.add("rotate-award-anticlockwise");
+      rosettePart.classList.remove("rotate-award-clockwise");
     }
   }
 }
