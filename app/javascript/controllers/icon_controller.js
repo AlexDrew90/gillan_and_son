@@ -41,7 +41,7 @@ export default class extends Controller {
       mainPart.classList.remove("stamp-down");
       mainPart.classList.add("stamp-up");
     }
-    if (rect.top < (340)) {
+    if (rect.top < (330)) {
       mainPart.classList.add("stamp-up");
       mainPart.classList.remove("stamp-down");
     }
