@@ -13,3 +13,13 @@ Review.create!(name: "Sheila B", description: "Beautiful job, lovely service fro
 Review.create!(name: "Kathy", description: "A lovely guy called Darryl did our granite refit windowsill and renew silicone after fitted 10 years ago by another company. Nice guy and he’s done a fab job. Thanks for organising.", rating: 5)
 Review.create!(name: "Beryl R", description: "The two lads Darryl and Aaron were really nice and polite and even tidied up afterwards. I would certainly recommend HD Granite to anyone looking to have new worktops fitted.", rating: 5)
 Review.create!(name: "Pam", description: "Punctual and helpful fitters. Job was very clean and tidy. My kitchen looks amazing. Have passed details on to my friends.", rating: 5)
+
+Brand.destroy_all
+Brand.create!(name: "Atlas", logo: "Atlas.png")
+Brand.create!(name: "Caesarstone", logo: "Caesarstone.png")
+Brand.create!(name: "Cimstone", logo: "Cimstone.png")
+Brand.create!(name: "Compac", logo: "Compac.png")
+Brand.create!(name: "Dekton", logo: "Dekton.png")
+Brand.create!(name: "Fugen", logo: "Fugen.png")
+Brand.create!(name: "Silestone", logo: "Silestone.png")
+Brand.create!(name: "Silkstone", logo: "Silkstone.png")
