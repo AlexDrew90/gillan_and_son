@@ -23,3 +23,11 @@ Brand.create!(name: "Dekton", logo: "Dekton.png")
 Brand.create!(name: "Fugen", logo: "Fugen.png")
 Brand.create!(name: "Silestone", logo: "Silestone.png")
 Brand.create!(name: "Silkstone", logo: "Silkstone.png")
+
+Material.destroy_all
+Material.create!(name: "Baltic Brown", type: "Granite", photo: "Granite_Baltic_Brown.jpeg")
+Material.create!(name: "Black Pearl", type: "Granite", photo: "Granite_Black_Pearl.jpeg")
+Material.create!(name: "Cosmic Black", type: "Granite", photo: "Granite_Cosmic_Black.jpeg")
+Material.create!(name: "Star Galaxy", type: "Granite", photo: "Granite_Star_Galaxy.jpeg")
+Material.create!(name: "Steel Grey", type: "Granite", photo: "Granite_Steel_Grey.jpeg")
+Material.create!(name: "Supreme Black", type: "Granite", photo: "Granite_Supreme_Black.jpeg")
