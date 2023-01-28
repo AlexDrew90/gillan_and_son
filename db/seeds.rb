@@ -31,3 +31,15 @@ Material.create!(name: "Cosmic Black", type: "Granite", photo: "Granite_Cosmic_B
 Material.create!(name: "Star Galaxy", type: "Granite", photo: "Granite_Star_Galaxy.jpeg")
 Material.create!(name: "Steel Grey", type: "Granite", photo: "Granite_Steel_Grey.jpeg")
 Material.create!(name: "Supreme Black", type: "Granite", photo: "Granite_Supreme_Black.jpeg")
+
+
+Material.create!(name: "Aspen White", type: "Quartz", photo: "Quartz_Aspen_White.jpeg")
+Material.create!(name: "Blanco Superior", type: "Quartz", photo: "Quartz_Blanco_Superior.jpeg")
+Material.create!(name: "Calacatta Gold", type: "Quartz", photo: "Quartz_Calacatta_Gold.jpeg")
+Material.create!(name: "Calacatta Legera", type: "Quartz", photo: "Quartz_Calacatta_Legera.jpeg")
+Material.create!(name: "Carrara Imperial", type: "Quartz", photo: "Quartz_Carrara_Imperial.jpeg")
+Material.create!(name: "Grey Starlight", type: "Quartz", photo: "Quartz_Grey_Starlight.jpeg")
+Material.create!(name: "Nero Calacatta", type: "Quartz", photo: "Quartz_Nero_Calacatta.jpeg")
+Material.create!(name: "Nero Marquina", type: "Quartz", photo: "Quartz_Nero_Marquina.jpeg")
+Material.create!(name: "Pure Grey", type: "Quartz", photo: "Quartz_Pure_Grey.jpeg")
+Material.create!(name: "White Starlight", type: "Quartz", photo: "Quartz_White_Starlight.jpeg")
