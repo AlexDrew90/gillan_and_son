@@ -43,3 +43,23 @@ Material.create!(name: "Nero Calacatta", type: "Quartz", photo: "Quartz_Nero_Cal
 Material.create!(name: "Nero Marquina", type: "Quartz", photo: "Quartz_Nero_Marquina.jpeg")
 Material.create!(name: "Pure Grey", type: "Quartz", photo: "Quartz_Pure_Grey.jpeg")
 Material.create!(name: "White Starlight", type: "Quartz", photo: "Quartz_White_Starlight.jpeg")
+
+# cimstone
+
+Material.create!(name: "Calacatta Magnificio", type: "Quartz", photo: "Quartz_Calacatta_Magnificio.jpeg")
+Material.create!(name: "Calacatta Venato", type: "Quartz", photo: "Quartz_Calacatta_Venato.jpeg")
+Material.create!(name: "Emprire Black", type: "Quartz", photo: "Quartz_Emprire_Black.jpeg")
+Material.create!(name: "Lapland", type: "Quartz", photo: "Quartz_Lapland.jpeg")
+Material.create!(name: "Nordic Grey", type: "Quartz", photo: "Quartz_Nordic_Grey.jpeg")
+Material.create!(name: "Statuario Venatino", type: "Quartz", photo: "Quartz_Statuario_Venatino.jpeg")
+
+# compac
+
+Material.create!(name: "Cobweb", type: "Quartz", photo: "Quartz_Cobweb.jpeg")
+Material.create!(name: "Ice_Max_Black", type: "Quartz", photo: "Quartz_Ice_Max_Black.jpeg")
+Material.create!(name: "Ice_Max_Pure", type: "Quartz", photo: "Quartz_Ice_Max_Pure.jpeg")
+Material.create!(name: "Nebulous Gold", type: "Quartz", photo: "Quartz_Nebulous_Gold.jpeg")
+Material.create!(name: "Unique Calacatta Black", type: "Quartz", photo: "Quartz_Unique_Calacatta_Black.jpeg")
+Material.create!(name: "Unique Portoro", type: "Quartz", photo: "Quartz_Unique_Portoro.jpeg")
+Material.create!(name: "Unique Statuario", type: "Quartz", photo: "Quartz_Unique_Statuario.jpeg")
+Material.create!(name: "Unique Statuario Gold", type: "Quartz", photo: "Quatz_Unique_Statuario_Gold.jpeg")
