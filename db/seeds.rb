@@ -63,3 +63,15 @@ Material.create!(name: "Unique Calacatta Black", type: "Quartz", photo: "Quartz_
 Material.create!(name: "Unique Portoro", type: "Quartz", photo: "Quartz_Unique_Portoro.jpeg")
 Material.create!(name: "Unique Statuario", type: "Quartz", photo: "Quartz_Unique_Statuario.jpeg")
 Material.create!(name: "Unique Statuario Gold", type: "Quartz", photo: "Quatz_Unique_Statuario_Gold.jpeg")
+
+# caesarstone
+
+Material.create!(name: "Agger Grey", type: "Quartz", photo: "Quartz_Agger_Grey.jpeg")
+Material.create!(name: "Black Tempal", type: "Quartz", photo: "Quartz_Black_Tempal.jpeg")
+Material.create!(name: "Concrete", type: "Quartz", photo: "Quartz_Concrete.jpeg")
+Material.create!(name: "Mink", type: "Quartz", photo: "Quartz_Mink.jpeg")
+Material.create!(name: "Oxidian", type: "Quartz", photo: "Quartz_Oxidian.jpeg")
+Material.create!(name: "Piatra Grey", type: "Quartz", photo: "Quartz_Piatra_Grey.jpeg")
+Material.create!(name: "Raindream", type: "Quartz", photo: "Quartz_Raindream.jpeg")
+Material.create!(name: "Rugged Concrete", type: "Quartz", photo: "Quartz_Rugged_Concrete.jpeg")
+Material.create!(name: "Woodlands", type: "Quartz", photo: "Quartz_Woodlands.jpeg")
