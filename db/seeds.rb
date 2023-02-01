@@ -75,3 +75,14 @@ Material.create!(name: "Piatra Grey", type: "Quartz", photo: "Quartz_Piatra_Grey
 Material.create!(name: "Raindream", type: "Quartz", photo: "Quartz_Raindream.jpeg")
 Material.create!(name: "Rugged Concrete", type: "Quartz", photo: "Quartz_Rugged_Concrete.jpeg")
 Material.create!(name: "Woodlands", type: "Quartz", photo: "Quartz_Woodlands.jpeg")
+
+# silestone
+
+Material.create!(name: "Charcoal Soapstone", type: "Quartz", photo: "Quartz_Charcoal_Soapstone.jpeg")
+Material.create!(name: "Desert Silver", type: "Quartz", photo: "Quartz_Desert_Silver.jpeg")
+Material.create!(name: "Et Noir", type: "Quartz", photo: "Quatz_Et_Noir.jpeg")
+Material.create!(name: "Iconic White", type: "Quartz", photo: "Quartz_Iconic_White.jpeg")
+Material.create!(name: "Miami White", type: "Quartz", photo: "Quartz_Miami_White.jpeg")
+Material.create!(name: "Pearl Jasmine", type: "Quartz", photo: "Quartz_Pearl_Jasmine.jpeg")
+Material.create!(name: "Poblenou", type: "Quartz", photo: "Quartz_Poblenou.jpeg")
+Material.create!(name: "Tebas Black", type: "Quartz", photo: "Quartz_Tebas_Black.jpeg")
