@@ -33,7 +33,6 @@ export default class extends Controller {
 
     let mainPart = document.getElementById("main-stamp");
     let rect =mainPart.getBoundingClientRect();
-    console.log(rect.top);
     if (rect.top <= (380)) {
       mainPart.classList.remove("stamp-up");
       mainPart.classList.add("stamp-down");

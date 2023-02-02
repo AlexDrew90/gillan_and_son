@@ -86,3 +86,23 @@ Material.create!(name: "Miami White", type: "Quartz", photo: "Quartz_Miami_White
 Material.create!(name: "Pearl Jasmine", type: "Quartz", photo: "Quartz_Pearl_Jasmine.jpeg")
 Material.create!(name: "Poblenou", type: "Quartz", photo: "Quartz_Poblenou.jpeg")
 Material.create!(name: "Tebas Black", type: "Quartz", photo: "Quartz_Tebas_Black.jpeg")
+
+# silkstone
+
+Material.create!(name: "Angelo White", type: "Quartz", photo: "Quartz_Angelo_White.jpeg")
+Material.create!(name: "Carrara Quartz", type: "Quartz", photo: "Quartz_Carrara_Quartz.jpeg")
+Material.create!(name: "Gris Venato", type: "Quartz", photo: "Quartz_Gris_Venato.jpeg")
+Material.create!(name: "Nero Venato", type: "Quartz", photo: "Quartz_Nero_Venato.jpeg")
+Material.create!(name: "Obsidian", type: "Quartz", photo: "Quartz_Obsidian.jpeg")
+Material.create!(name: "Venato Royale", type: "Quartz", photo: "Quartz_Venato_Royale.jpeg")
+
+# Fugen
+
+Material.create!(name: "Arabesque", type: "Quartz", photo: "Quartz_Arabesque.jpeg")
+Material.create!(name: "Avalanche", type: "Quartz", photo: "Quartz_Avalanche.jpeg")
+Material.create!(name: "Bianco Eclipsia", type: "Quartz", photo: "Quartz_Bianco_Eclipsia.jpeg")
+Material.create!(name: "Black Shimmer", type: "Quartz", photo: "Quartz_Black_Shimmer.jpeg")
+Material.create!(name: "Cream Mirror", type: "Quartz", photo: "Quartz_Cream_Mirror.jpeg")
+Material.create!(name: "Eternal", type: "Quartz", photo: "Quartz_Eternal.jpeg")
+Material.create!(name: "Euphrates", type: "Quartz", photo: "Quartz_Euphrates.jpeg")
+Material.create!(name: "Grey Mirror", type: "Quartz", photo: "Quartz_Grey_Mirror.jpeg")
