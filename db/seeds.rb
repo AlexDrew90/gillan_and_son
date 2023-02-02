@@ -96,7 +96,7 @@ Material.create!(name: "Nero Venato", type: "Quartz", photo: "Quartz_Nero_Venato
 Material.create!(name: "Obsidian", type: "Quartz", photo: "Quartz_Obsidian.jpeg")
 Material.create!(name: "Venato Royale", type: "Quartz", photo: "Quartz_Venato_Royale.jpeg")
 
-# Fugen
+# fugen
 
 Material.create!(name: "Arabesque", type: "Quartz", photo: "Quartz_Arabesque.jpeg")
 Material.create!(name: "Avalanche", type: "Quartz", photo: "Quartz_Avalanche.jpeg")
@@ -106,3 +106,23 @@ Material.create!(name: "Cream Mirror", type: "Quartz", photo: "Quartz_Cream_Mirr
 Material.create!(name: "Eternal", type: "Quartz", photo: "Quartz_Eternal.jpeg")
 Material.create!(name: "Euphrates", type: "Quartz", photo: "Quartz_Euphrates.jpeg")
 Material.create!(name: "Grey Mirror", type: "Quartz", photo: "Quartz_Grey_Mirror.jpeg")
+
+# dekton
+
+Material.create!(name: "Aeris", type: "Ceramic", photo: "Ceramic_Aeris.jpeg")
+Material.create!(name: "Eter", type: "Ceramic", photo: "Ceramic_Eter.jpeg")
+Material.create!(name: "Helena", type: "Ceramic", photo: "Ceramic_Helena.jpeg")
+Material.create!(name: "Khalo", type: "Ceramic", photo: "Ceramic_Khalo.jpeg")
+Material.create!(name: "Laurent", type: "Ceramic", photo: "Ceramic_Laurent.jpeg")
+Material.create!(name: "Liquid Embers", type: "Ceramic", photo: "Ceramic_Liquid_Embers.jpeg")
+Material.create!(name: "Liquid Shell", type: "Ceramic", photo: "Ceramic_Liquid_Shell.jpeg")
+Material.create!(name: "Liquid Sky", type: "Ceramic", photo: "Ceramic_Liquid_Sky.jpeg")
+
+# atlas
+
+Material.create!(name: "Calacatta Antique", type: "Ceramic", photo: "Ceramic_Calacatta_Antique.jpeg")
+Material.create!(name: "Calacatta Borghini", type: "Ceramic", photo: "Ceramic_Calacatta_Borghini.jpeg")
+Material.create!(name: "Calacatta Delicato", type: "Ceramic", photo: "Ceramic_Calacatta_Delicato.jpeg")
+Material.create!(name: "Calacatta Extra", type: "Ceramic", photo: "Ceramic_Calacatta_Extra.jpeg")
+Material.create!(name: "Calacatta Imperiale", type: "Ceramic", photo: "Ceramic_Calacatta_Imperiale.jpeg")
+Material.create!(name: "Calacatta Royal", type: "Ceramic", photo: "Ceramic_Calacatta_Royal.jpeg")
