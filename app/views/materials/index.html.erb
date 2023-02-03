@@ -2,3 +2,9 @@
 <h1>Materials#index</h1>
 <p>Find me in app/views/materials/index.html.erb</p>
 </div>
+
+<ul>
+<% @materials.each do |material| %>
+  <li><%"#{material.name}"%></li>
+  <% end %>
+</ul>
