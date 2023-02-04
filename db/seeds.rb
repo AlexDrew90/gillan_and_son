@@ -15,6 +15,7 @@ Review.create!(name: "Beryl R", description: "The two lads Darryl and Aaron were
 Review.create!(name: "Pam", description: "Punctual and helpful fitters. Job was very clean and tidy. My kitchen looks amazing. Have passed details on to my friends.", rating: 5)
 
 Brand.destroy_all
+Brand.create!(name: "Gillan and son")
 Brand.create!(name: "Atlas", logo: "Atlas.png")
 Brand.create!(name: "Caesarstone", logo: "Caesarstone.png")
 Brand.create!(name: "Cimstone", logo: "Cimstone.png")
@@ -31,7 +32,6 @@ Material.create!(name: "Cosmic Black", material_type: "Granite", photo: "Granite
 Material.create!(name: "Star Galaxy", material_type: "Granite", photo: "Granite_Star_Galaxy.jpeg")
 Material.create!(name: "Steel Grey", material_type: "Granite", photo: "Granite_Steel_Grey.jpeg")
 Material.create!(name: "Supreme Black", material_type: "Granite", photo: "Granite_Supreme_Black.jpeg")
-
 
 Material.create!(name: "Aspen White", material_type: "Quartz", photo: "Quartz_Aspen_White.jpeg")
 Material.create!(name: "Blanco Superior", material_type: "Quartz", photo: "Quartz_Blanco_Superior.jpeg")
