@@ -15,7 +15,7 @@ Review.create!(name: "Beryl R", description: "The two lads Darryl and Aaron were
 Review.create!(name: "Pam", description: "Punctual and helpful fitters. Job was very clean and tidy. My kitchen looks amazing. Have passed details on to my friends.", rating: 5)
 
 Brand.destroy_all
-gillan = Brand.create!(name: "Gillan and son")
+Brand.create!(id: 1, name: "Gillan and son")
 Brand.create!(name: "Atlas", logo: "Atlas.png")
 Brand.create!(name: "Caesarstone", logo: "Caesarstone.png")
 Brand.create!(name: "Cimstone", logo: "Cimstone.png")
@@ -26,7 +26,7 @@ Brand.create!(name: "Silestone", logo: "Silestone.png")
 Brand.create!(name: "Silkstone", logo: "Silkstone.png")
 
 Material.destroy_all
-Material.create!(name: "Baltic Brown", material_type: "Granite", photo: "Granite_Baltic_Brown.jpeg")
+Material.create!(brand_id: 1, name: "Baltic Brown", material_type: "Granite", photo: "Granite_Baltic_Brown.jpeg")
 # Material.create!(name: "Black Pearl", material_type: "Granite", photo: "Granite_Black_Pearl.jpeg")
 # Material.create!(name: "Cosmic Black", material_type: "Granite", photo: "Granite_Cosmic_Black.jpeg")
 # Material.create!(name: "Star Galaxy", material_type: "Granite", photo: "Granite_Star_Galaxy.jpeg")
