@@ -10,7 +10,6 @@ Review.destroy_all
 Material.destroy_all
 Brand.destroy_all
 
-
 Review.create!(name: "Rob", description: "We had quartz fitted today and the guys did a great job. The largest piece was too big to go in the lift so they had to carry it up the stairs. We are on the the third floor - ouch!!", rating: 5)
 Review.create!(name: "Gill", description: "Highly recommend HD granite - excellent job with experienced fitters - very friendly team and have had lots of compliments about my worktops.", rating: 5)
 Review.create!(name: "Sheila B", description: "Beautiful job, lovely service from start to finish. Helped me choose the right quartz. Would highly recommend to anyone.", rating: 5)
@@ -58,8 +57,8 @@ Material.create!(brand_id: 4, name: "Statuario Venatino", material_type: "Quartz
 # compac
 
 Material.create!(brand_id: 5, name: "Cobweb", material_type: "Quartz", photo: "Quartz_Cobweb.jpeg")
-Material.create!(brand_id: 5, name: "Ice_Max_Black", material_type: "Quartz", photo: "Quartz_Ice_Max_Black.jpeg")
-Material.create!(brand_id: 5, name: "Ice_Max_Pure", material_type: "Quartz", photo: "Quartz_Ice_Max_Pure.jpeg")
+Material.create!(brand_id: 5, name: "Ice Max Black", material_type: "Quartz", photo: "Quartz_Ice_Max_Black.jpeg")
+Material.create!(brand_id: 5, name: "Ice Max Pure", material_type: "Quartz", photo: "Quartz_Ice_Max_Pure.jpeg")
 Material.create!(brand_id: 5, name: "Nebulous Gold", material_type: "Quartz", photo: "Quartz_Nebulous_Gold.jpeg")
 Material.create!(brand_id: 5, name: "Unique Calacatta Black", material_type: "Quartz", photo: "Quartz_Unique_Calacatta_Black.jpeg")
 Material.create!(brand_id: 5, name: "Unique Portoro", material_type: "Quartz", photo: "Quartz_Unique_Portoro.jpeg")
