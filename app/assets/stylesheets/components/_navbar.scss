@@ -71,11 +71,16 @@
     list-style: none;
     font-size: 1.5rem;
     cursor: pointer;
+    a{
     list-style: none;
+    color: white;
+    text-decoration: none;
+    }
+    a:hover{
+      color: #9ADBFF;
+    }
   }
-  li:hover{
-    color: #9ADBFF;
-  }
+
 }
 
 
