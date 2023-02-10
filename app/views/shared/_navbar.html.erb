@@ -7,9 +7,9 @@
           <i class="nav-icon fa-solid fa-bars fa-3x" data-action="click->navlist#list" data-navlist-target="icon"></i>
         </button>
         <ul class="navbar-links hide-nav-list" data-navlist-target="menu">
-          <li class="home-button-nav">Home</li>
+          <li class="home-button-nav"><%= link_to "Home", root_path %></li>
           <li>Our work</li>
-          <li>Materials</li>
+          <li><%= link_to "Materials", materials_path %></li>
           <li>Get in touch</li>
         </ul>
       </div>

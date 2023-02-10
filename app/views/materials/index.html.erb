@@ -14,7 +14,7 @@
     <div class="row">
       <% @materials.each do |material| %>
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-        <%= link_to image_tag("materials/#{material.photo}") %>
+        <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
           <h3 class="home-subheaders"><%= "#{material.name}"%></h3>
         </div>
       <% end %>
