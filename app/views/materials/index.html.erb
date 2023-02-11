@@ -1,24 +1,27 @@
 <div class="materials-intro-section">
-    <h1 class="home-header">Materials</h1>
+    <h1 class=>Materials</h1>
     <p>Deciding on the right material can be difficult We offer a wide range of materials to suit your style. or select from one of our trusted suppliers</p>
 
   <ul>
   <% @brands.each do |brand| %>
+  <% if brand.name = "Atlas" %>
     <li>
       <%= "#{brand.name}"%>
     </li>
   <% end %>
+  <% end %>
   </ul>
-
-  <div class="container">
-    <div class="row">
-      <% @materials.each do |material| %>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-        <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
-          <h3 class="home-subheaders"><%= "#{material.name}"%></h3>
-        </div>
-      <% end %>
+  <div class="materials-granite-section">
+  <h1 class="home-header">Granite</h1>
+    <div class="container">
+      <div class="row">
+        <% @materials.where(:material_type => "Granite").each do |material| %>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+            <h3 class="home-subheaders"><%= "#{material.name}"%></h3>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-
 </div>
