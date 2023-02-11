@@ -1,27 +1,35 @@
-<div class="materials-intro-section">
-    <h1 class=>Materials</h1>
-    <p>Deciding on the right material can be difficult We offer a wide range of materials to suit your style. or select from one of our trusted suppliers</p>
-
-  <ul>
-  <% @brands.each do |brand| %>
-  <% if brand.name = "Atlas" %>
-    <li>
-      <%= "#{brand.name}"%>
-    </li>
-  <% end %>
-  <% end %>
-  </ul>
-  <div class="materials-granite-section">
-  <h1 class="home-header">Granite</h1>
-    <div class="container">
-      <div class="row">
-        <% @materials.where(:material_type => "Granite").each do |material| %>
-          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-          <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
-            <h3 class="home-subheaders"><%= "#{material.name}"%></h3>
-          </div>
-        <% end %>
+<div class="materials-wrapper-section">
+  <div class="materials-intro-section">
+    <h1 class="home-header">Materials</h1>
+    <p>We offer a wide range of materials to suit your style. Find out more about each of the materials we use by selecting one below. or select from one of our trusted suppliers</p>
+  </div>
+  <div class="material-display-section">
+    <div class="materials-tab">
+      <ul class="materials-tab-list">
+      <li class="selected-material">Granite</li>
+      <li>Quartz</li>
+      <li>Ceramic</li>
+      </ul>
+    </div>
+    <div class="materials-granite-section">
+      <div>
+        <p>Granite is undoubtedly one of the toughest materials on the planet. It is formed through a process which takes millions of years deep beneath the earth's surface. As a result, kitchen granite worktops are an excellent work surface, they're tough and will not scratch under everyday use.</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <% @materials.where(:material_type => "Granite").each do |material| %>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="material-tile-wrapper">
+              <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+              <p><%= "#{material.name}"%></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="materials-end-section">
+    <p>Having trouble deciding? Feel free to <%= link_to "get in touch", contact_path %> with us. We can help you find a custom style.</p>
   </div>
 </div>
