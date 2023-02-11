@@ -12,7 +12,7 @@
   h1{
     width: 100%;
     font-family: 'Assistant', sans-serif;
-    font-size: 5rem;
+    font-size: 5.5rem;
   }
   h3{
     width: 100%;
@@ -20,6 +20,8 @@
     font-family: 'Assistant', sans-serif;
     font-size: 3rem;
     max-width: 50vw;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
   }
 }
 
@@ -35,7 +37,7 @@
   /* For a screen < 720px, this CSS will be read */
   .home-banner{
     display: block;
-    background-image: linear-gradient(rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.2) 90%), url(kitchen-main.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.3) 90%), url(kitchen-main.jpg);
     background-size: cover;
     margin: 2vh 0vw 0vh 0vw;
     width: 100%;
@@ -55,6 +57,7 @@
     padding-left: 6vw;
     padding-right: 4vw;
     font-size: 2rem;
+    font-weight: 300;
   }
   .home-banner-image{
     visibility: hidden;
