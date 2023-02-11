@@ -7,7 +7,7 @@ export default class extends Controller {
   }
   updateNavbar() {
     // if (window.scrollY >= (100 + this.element.offsetHeight)) {
-    if (window.scrollY >= (300)) {
+    if (window.scrollY >= (360)) {
       this.element.classList.add("button-banner");
       this.element.classList.remove("button-div");
     } else {
