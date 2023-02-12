@@ -32,6 +32,51 @@
         </div>
       </div>
     </div>
+    <div class="materials-quartz-section">
+      <div class="material-overview">
+        <p>Quartz worktops are made from engineered stone. This is a very solid, non-porous material formed by a combination of ground quartz, resins and polymers, preventing bacteria from growing and making it more hygienic.</p>
+        <p>Engineered stone is hardwearing and moisture-resistant, qualities that help preserve its appearance for longer, while the consistent composition of the material also gives a uniform colour and pattern for a cohesive look throughout a room.</p>
+        <p>Quartz worktops are an investment feature for any space, a luxurious look that can blend seamlessly with a contemporary finish or provide a striking contrast alongside heritage designs.</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <% @materials.where(:material_type => "Quartz").each do |material| %>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="material-tile-wrapper">
+              <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+              <% find_brand = material.brand_id  %>
+              <span class="brand-tile-overlay">
+                <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+              </span>
+              <p><%= "#{material.name}"%></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="materials-ceramic-section">
+      <div class="material-overview">
+        <p>The latest development in high end worktops, ceramic worktops, also known as sintered stone, are heated at extremely high temperatures and under immense pressure to create a countertop able to withstand almost all the challenges thrown at them.</p>
+        <p>Hard-wearing, hygienic and durable, ceramic worktops are also scratch-proof, heat-resistant and non-porous, providing a popular choice for modern kitchens.</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <% @materials.where(:material_type => "Ceramic").each do |material| %>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="material-tile-wrapper">
+              <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+              <% find_brand = material.brand_id  %>
+              <span class="brand-tile-overlay">
+                <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+              </span>
+              <p><%= "#{material.name}"%></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="materials-end-section">
     <p>Having trouble deciding? Feel free to <%= link_to "get in touch", contact_path %> with us. We can help you find a custom style.</p>
