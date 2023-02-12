@@ -17,7 +17,7 @@ Review.create!(name: "Kathy", description: "A lovely guy called Darryl did our g
 Review.create!(name: "Beryl R", description: "The two lads Darryl and Aaron were really nice and polite and even tidied up afterwards. I would certainly recommend HD Granite to anyone looking to have new worktops fitted.", rating: 5)
 Review.create!(name: "Pam", description: "Punctual and helpful fitters. Job was very clean and tidy. My kitchen looks amazing. Have passed details on to my friends.", rating: 5)
 
-Brand.create!(id: 1, name: "Gillan and son")
+Brand.create!(id: 1, name: "Gillan and son", logo: "Gillan_and_son.png")
 Brand.create!(id: 2, name: "Atlas", logo: "Atlas.png")
 Brand.create!(id: 3, name: "Caesarstone", logo: "Caesarstone.png")
 Brand.create!(id: 4, name: "Cimstone", logo: "Cimstone.png")
