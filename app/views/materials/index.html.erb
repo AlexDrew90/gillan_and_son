@@ -17,7 +17,8 @@
       </div>
       <div class="container">
         <div class="row">
-          <% @materials.where(:material_type => "Granite").each do |material| %>
+        <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
+          <% sorted_materials.find_all { |obj| obj.material_type == "Granite"}.each do |material| %>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="material-tile-wrapper">
               <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
@@ -40,7 +41,8 @@
       </div>
       <div class="container">
         <div class="row">
-          <% @materials.where(:material_type => "Quartz").each do |material| %>
+          <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
+          <% sorted_materials.find_all { |obj| obj.material_type == "Quartz"}.each do |material| %>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="material-tile-wrapper">
               <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
@@ -62,7 +64,8 @@
       </div>
       <div class="container">
         <div class="row">
-          <% @materials.where(:material_type => "Ceramic").each do |material| %>
+          <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
+          <% sorted_materials.find_all { |obj| obj.material_type == "Ceramic"}.each do |material| %>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="material-tile-wrapper">
               <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
