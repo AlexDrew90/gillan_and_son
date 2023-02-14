@@ -13,6 +13,9 @@ application.register("hello", HelloController)
 import IconController from "./icon_controller"
 application.register("icon", IconController)
 
+import MaterialsToggleController from "./materials_toggle_controller"
+application.register("materials-toggle", MaterialsToggleController)
+
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
 
