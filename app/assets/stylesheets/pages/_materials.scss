@@ -26,6 +26,12 @@
   }
 }
 
+.inactive-materials-section{
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
 .material-overview{
   p{
     font-size: 1.5rem;
@@ -68,7 +74,6 @@
     visibility: visible;
   }
 }
-
 
 .materials-end-section{
   width: 90vw;
