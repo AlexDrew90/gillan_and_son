@@ -3,6 +3,11 @@
   padding: 10vh 0;
 }
 
+.contact-info-section p{
+  padding: 2vh 0 2vh 0;
+  font-size: 2rem;
+}
+
 .contact-method-list{
   list-style: none;
   margin: 3vh 0;
@@ -10,7 +15,7 @@
 
 .contact-icons{
   text-align: center;
-  color: #0A1045;
+  color: #3c035d;
   padding: 20px;
 }
 
@@ -19,11 +24,15 @@
   display: flex;
   justify-content: center;
   height: 30vh;
+  background-color: #FDF9FA;
+  border-radius: 15px;
 }
 
 .contact-info-right{
   text-align: center;
   height: 30vh;
+  background-color: #FDF9FA;
+  border-radius: 15px;
 }
 
 .contact-info{
