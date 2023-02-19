@@ -22,29 +22,48 @@
 }
 
 .contact-info-left{
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  height: 30vh;
+  height: 100%;
   background-color: #FDF9FA;
   border-radius: 15px;
   margin: 0vh 2vh 0vh 2vw;
+  text-align: center;
+  padding: 25px;
+}
+
+.contact-info-left-inner{
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-info-right{
   text-align: center;
-  height: 30vh;
+  height: 100%;
   background-color: #FDF9FA;
   border-radius: 15px;
   margin: 0vh 2vh 0vh 2vw;
+  padding: 25px;
+}
+
+.contact-quote-text{
+  margin-bottom: 10%;
 }
 
 .contact-info-bottom{
   text-align: center;
-  height: 30vh;
   background-color: #FDF9FA;
   border-radius: 15px;
   margin: 4vh 2vw 0vh 2vw;
+}
+
+.contact-hours-list{
+  list-style: none;
+  margin: 20px;
+}
+
+.showroom-image{
+  border-radius: 15px;
+  width: 60%;
 }
 
 .contact-info{
