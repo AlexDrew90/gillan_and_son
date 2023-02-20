@@ -1,17 +1,22 @@
 <div class="navbar-gs">
   <div class="navbar-wrap">
-    <div class="navbar-logo"><p>Gillan<br>& son</p>
+    <div class="navbar-logo">
+      <p>Gillan<br>& son</p>
     </div>
       <div class="dropdown-element" data-controller="navlist">
         <button type="button" class="dropdown-button">
           <i class="nav-icon fa-solid fa-bars fa-3x" data-action="click->navlist#list" data-navlist-target="icon"></i>
         </button>
-        <ul class="navbar-links hide-nav-list" data-navlist-target="menu">
-          <li class="home-button-nav"><%= link_to "Home", root_path %></li>
-          <li>Our work</li>
-          <li><%= link_to "Materials", materials_path %></li>
-          <li><%= link_to "Get in touch", contact_path %></li>
-        </ul>
+        <div class="navlinks-wrapper">
+          <div class="navlinks-inner">
+            <ul class="navbar-links hide-nav-list" data-navlist-target="menu">
+              <li class="home-button-nav"><%= link_to "Home", root_path %></li>
+              <li>Our work</li>
+              <li><%= link_to "Materials", materials_path %></li>
+              <li><%= link_to "Get in touch", contact_path %></li>
+            </ul>
+          </div>
+        </div>
       </div>
   </div>
 </div>
