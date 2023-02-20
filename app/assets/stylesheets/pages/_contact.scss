@@ -1,11 +1,15 @@
 .contact-wrapper{
   margin: 2vh 5vw 2vh 5vw;
-  padding: 10vh 0;
+  padding: 10vh 0 5vh 0;
 }
 
 .contact-info-section p{
-  padding: 2vh 0 2vh 0;
+  padding: 1vh 0 1vh 0;
   font-size: 2rem;
+}
+
+.contact-intro{
+  padding: 0 0 3vh 0;
 }
 
 .contact-method-list{
@@ -25,9 +29,8 @@
   height: 100%;
   background-color: #FDF9FA;
   border-radius: 15px;
-  margin: 0vh 2vh 0vh 2vw;
   text-align: center;
-  padding: 25px;
+  padding: 35px;
 }
 
 .contact-info-left-inner{
@@ -41,8 +44,10 @@
   height: 100%;
   background-color: #FDF9FA;
   border-radius: 15px;
-  margin: 0vh 2vh 0vh 2vw;
-  padding: 25px;
+  padding: 35px;
+  p{
+    padding-top: 4vh;
+  }
 }
 
 .contact-quote-text{
@@ -53,15 +58,28 @@
   text-align: center;
   background-color: #FDF9FA;
   border-radius: 15px;
-  margin: 4vh 2vw 0vh 2vw;
+  margin: 2vh 0 0 0;
+  padding: 4vh 2vw 4vh 2vw;
+  h3{
+    margin-top: 0;
+    margin-bottom: 4vh;
+  }
 }
 
 .contact-hours-list{
   list-style: none;
-  margin: 20px;
+  width: 90%;
+  padding: 10%;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  font-size: 1.5rem;
 }
 
 .showroom-image{
+  display: block;
+  background-image: linear-gradient(rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.8) 90%), url(showroom.png);
+  background-size: cover;
   border-radius: 15px;
   width: 60%;
 }
@@ -70,7 +88,20 @@
   font-size: 2rem;
 }
 
+.contact-info-hours{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-info-list-item{
   align-items: center;
   display: flex;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .contact-info-bottom{
+    margin: 4vh 0 0 0;
+  }
 }
