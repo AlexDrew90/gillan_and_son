@@ -67,22 +67,27 @@
   }
 }
 
-.contact-hours-list{
-  list-style: none;
-  padding: 10%;
-  font-weight: 600;
-  color: #fff;
-  text-align: left;
-  font-size: 1.5rem;
+.opening-times-wrapper{
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  width: 100%;
+  height: 30vh;
+  min-width: 300px;
+  padding: 5%;
 }
 
-.showroom-image{
-  display: block;
-  background-image: linear-gradient(rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.8) 90%), url(showroom.png);
-  background-size: cover;
-  border-radius: 15px;
-  width: 60%;
-  min-width: 300px;
+.opening-times{
+  h4{
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.contact-hours-list{
+  list-style: none;
+  text-align: left;
+  font-size: 1.5rem;
 }
 
 .contact-info{
@@ -94,7 +99,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30vh;
 }
 
 .contact-info-list-item{
@@ -103,24 +107,22 @@
   padding-bottom: 5px;
 }
 
+.contact-info-map{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #map{
   border-radius: 15px;
   width: 100%;
+  max-width: 580px;
   height: 30vh;
 }
 
 .contact-address{
-  margin-top: 2vh;
-  font-weight: 600;
-  font-size: 1.5rem;
-  p{
-    margin: 0;
-  }
-}
-
-.contact-company-number{
-  margin-top: 2vh;
-  font-weight: 600;
+  margin-top: 4vh;
+  font-weight: 400;
   font-size: 1.5rem;
   p{
     margin: 0;
