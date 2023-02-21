@@ -27,6 +27,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "geocoder"
+
+gem 'turbolinks'
+gem 'gmaps4rails', '~> 2.0.1', git: 'https://github.com/fiedl/Google-Maps-for-Rails.git'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

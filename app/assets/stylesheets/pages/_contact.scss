@@ -3,7 +3,7 @@
   padding: 10vh 0 5vh 0;
 }
 
-.contact-info-section p{
+.contact-intro p{
   padding: 1vh 0 1vh 0;
   font-size: 2rem;
 }
@@ -47,6 +47,7 @@
   padding: 35px;
   p{
     padding-top: 4vh;
+    font-size: 2rem;
   }
 }
 
@@ -68,7 +69,6 @@
 
 .contact-hours-list{
   list-style: none;
-  width: 90%;
   padding: 10%;
   font-weight: 600;
   color: #fff;
@@ -82,6 +82,7 @@
   background-size: cover;
   border-radius: 15px;
   width: 60%;
+  min-width: 300px;
 }
 
 .contact-info{
@@ -92,12 +93,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 30vh;
 }
 
 .contact-info-list-item{
   align-items: center;
   display: flex;
   padding-bottom: 5px;
+}
+
+#map{
+  border-radius: 15px;
+  width: 100%;
+  height: 30vh;
+}
+
+.contact-address{
+  margin-top: 2vh;
+  font-weight: 600;
+  font-size: 1.5rem;
+  p{
+    margin: 0;
+  }
+}
+
+.contact-company-number{
+  margin-top: 2vh;
+  font-weight: 600;
+  font-size: 1.5rem;
+  p{
+    margin: 0;
+  }
 }
 
 @media (max-width: 768px) {

@@ -13,6 +13,9 @@ application.register("hello", HelloController)
 import IconController from "./icon_controller"
 application.register("icon", IconController)
 
+import MapController from "./map_controller"
+application.register("map", MapController)
+
 import MaterialsToggleController from "./materials_toggle_controller"
 application.register("materials-toggle", MaterialsToggleController)
 
