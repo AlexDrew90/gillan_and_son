@@ -1,8 +1,9 @@
-// .swiper-wrapper{
-//   background-color: white;
-//   border-radius: 10px;
-//   width: 50vw;
-// }
+
+
+.testimonial-wrap{
+  max-width: 1320px;
+  margin: 0 auto;
+}
 
 .total-carousel-wrap{
   margin-top: 6vh;
@@ -92,4 +93,12 @@
   .review-text{
     font-size: 1.5rem;
    }
+
+   .carousel-arrow-right{
+    right: 3vw;
+   }
+
+   .carousel-arrow-left{
+     left: 3vw;
+    }
 }
