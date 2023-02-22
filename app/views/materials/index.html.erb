@@ -3,80 +3,84 @@
     <h1 class="home-header">Materials</h1>
     <p>We offer Granite, Quartz and Ceramic worktops in a wide range of styles. You can choose a design from our in-house range or opt for one of our trusted suppliers. Find out more about each of the materials we use by selecting one below:</p>
   </div>
-  <div class="material-display-section" data-controller="materials-toggle">
-    <div class="materials-tab">
-      <ul class="materials-tab-list">
-      <li class="granite-header selected-material" data-action="click->materials-toggle#granite">Granite</li>
-      <li class="quartz-header" data-action="click->materials-toggle#quartz">Quartz</li>
-      <li class="ceramic-header" data-action="click->materials-toggle#ceramic">Ceramic</li>
-      </ul>
-    </div>
-    <div class="materials-granite-section active-materials-section" data-materials-toggle-target="granite">
-      <div class="material-overview">
-        <p>Granite is undoubtedly one of the toughest materials on the planet. It is formed through a process which takes millions of years deep beneath the earth's surface. As a result, kitchen granite worktops are an excellent work surface, they're tough and will not scratch under everyday use.</p>
-      </div>
-      <div class="container">
-        <div class="row">
-        <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
-          <% sorted_materials.find_all { |obj| obj.material_type == "Granite"}.each do |material| %>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="material-tile-wrapper">
-              <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
-              <% find_brand = material.brand_id  %>
-              <span class="brand-tile-overlay">
-                <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
-              </span>
-              <p><%= "#{material.name}"%></p>
-              </div>
-            </div>
-          <% end %>
+  <div class="materials-display-wrapper">
+    <div class="materials-display-width">
+      <div class="material-display-section" data-controller="materials-toggle">
+        <div class="materials-tab">
+          <ul class="materials-tab-list">
+          <li class="granite-header selected-material" data-action="click->materials-toggle#granite">Granite</li>
+          <li class="quartz-header" data-action="click->materials-toggle#quartz">Quartz</li>
+          <li class="ceramic-header" data-action="click->materials-toggle#ceramic">Ceramic</li>
+          </ul>
         </div>
-      </div>
-    </div>
-    <div class="materials-quartz-section inactive-materials-section" data-materials-toggle-target="quartz">
-      <div class="material-overview">
-        <p>Quartz worktops are made from engineered stone. This is a very solid, non-porous material formed by a combination of ground quartz, resins and polymers, preventing bacteria from growing and making it more hygienic.</p>
-        <p>Engineered stone is hardwearing and moisture-resistant, qualities that help preserve its appearance for longer, while the consistent composition of the material also gives a uniform colour and pattern for a cohesive look throughout a room.</p>
-        <p>Quartz worktops are an investment feature for any space, a luxurious look that can blend seamlessly with a contemporary finish or provide a striking contrast alongside heritage designs.</p>
-      </div>
-      <div class="container">
-        <div class="row">
-          <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
-          <% sorted_materials.find_all { |obj| obj.material_type == "Quartz"}.each do |material| %>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="material-tile-wrapper">
-              <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
-              <% find_brand = material.brand_id  %>
-              <span class="brand-tile-overlay">
-                <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
-              </span>
-              <p><%= "#{material.name}"%></p>
-              </div>
+        <div class="materials-granite-section active-materials-section" data-materials-toggle-target="granite">
+          <div class="material-overview">
+            <p>Granite is undoubtedly one of the toughest materials on the planet. It is formed through a process which takes millions of years deep beneath the earth's surface. As a result, kitchen granite worktops are an excellent work surface, they're tough and will not scratch under everyday use.</p>
+          </div>
+          <div class="container">
+            <div class="row">
+            <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
+              <% sorted_materials.find_all { |obj| obj.material_type == "Granite"}.each do |material| %>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="material-tile-wrapper">
+                  <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+                  <% find_brand = material.brand_id  %>
+                  <span class="brand-tile-overlay">
+                    <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+                  </span>
+                  <p><%= "#{material.name}"%></p>
+                  </div>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="materials-ceramic-section inactive-materials-section" data-materials-toggle-target="ceramic">
-      <div class="material-overview">
-        <p>The latest development in high end worktops, ceramic worktops, also known as sintered stone, are heated at extremely high temperatures and under immense pressure to create a countertop able to withstand almost all the challenges thrown at them.</p>
-        <p>Hard-wearing, hygienic and durable, ceramic worktops are also scratch-proof, heat-resistant and non-porous, providing a popular choice for modern kitchens.</p>
-      </div>
-      <div class="container">
-        <div class="row">
-          <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
-          <% sorted_materials.find_all { |obj| obj.material_type == "Ceramic"}.each do |material| %>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="material-tile-wrapper">
-              <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
-              <% find_brand = material.brand_id  %>
-              <span class="brand-tile-overlay">
-                <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
-              </span>
-              <p><%= "#{material.name}"%></p>
-              </div>
+        <div class="materials-quartz-section inactive-materials-section" data-materials-toggle-target="quartz">
+          <div class="material-overview">
+            <p>Quartz worktops are made from engineered stone. This is a very solid, non-porous material formed by a combination of ground quartz, resins and polymers, preventing bacteria from growing and making it more hygienic.</p>
+            <p>Engineered stone is hardwearing and moisture-resistant, qualities that help preserve its appearance for longer, while the consistent composition of the material also gives a uniform colour and pattern for a cohesive look throughout a room.</p>
+            <p>Quartz worktops are an investment feature for any space, a luxurious look that can blend seamlessly with a contemporary finish or provide a striking contrast alongside heritage designs.</p>
+          </div>
+          <div class="container">
+            <div class="row">
+              <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
+              <% sorted_materials.find_all { |obj| obj.material_type == "Quartz"}.each do |material| %>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="material-tile-wrapper">
+                  <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+                  <% find_brand = material.brand_id  %>
+                  <span class="brand-tile-overlay">
+                    <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+                  </span>
+                  <p><%= "#{material.name}"%></p>
+                  </div>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
+        </div>
+        <div class="materials-ceramic-section inactive-materials-section" data-materials-toggle-target="ceramic">
+          <div class="material-overview">
+            <p>The latest development in high end worktops, ceramic worktops, also known as sintered stone, are heated at extremely high temperatures and under immense pressure to create a countertop able to withstand almost all the challenges thrown at them.</p>
+            <p>Hard-wearing, hygienic and durable, ceramic worktops are also scratch-proof, heat-resistant and non-porous, providing a popular choice for modern kitchens.</p>
+          </div>
+          <div class="container">
+            <div class="row">
+              <% sorted_materials = @materials.sort_by {|obj| obj.name}  %>
+              <% sorted_materials.find_all { |obj| obj.material_type == "Ceramic"}.each do |material| %>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="material-tile-wrapper">
+                  <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+                  <% find_brand = material.brand_id  %>
+                  <span class="brand-tile-overlay">
+                    <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+                  </span>
+                  <p><%= "#{material.name}"%></p>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

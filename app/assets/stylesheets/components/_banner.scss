@@ -1,5 +1,11 @@
+.banner-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
 .home-banner{
   width: 90vw;
+  max-width: 1320px;
   margin: 12vh 5vw 4vh 5vw;
   padding: 10vh 0;
   color: #0A0C31;
@@ -31,6 +37,7 @@
   height: 38vh;
   object-fit: cover;
   margin-top: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);
 }
 
 

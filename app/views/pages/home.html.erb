@@ -52,39 +52,41 @@ commercial and domestic projects.</p>
 </div>
 
 <div class="home-testimonial-section" data-controller="carousel">
-  <h3 class="home-header">Testimonials</h3>
- <div class=total-carousel-wrap>
-    <div class="carousel-container">
-      <button class = "carousel-arrow carousel-arrow-left" data-action="click->carousel#left"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
-        <div class="carousel-track-wrapper">
-          <ul class="carousel-track">
-                <li class="carousel-slide corousel-one active-slide" data-carousel-target="slideone">
-                  <div class="review-text">
-                    <p>"<%= @reviews.first.description %>"</p>
-                    <p> - <%= @reviews.first.name %></p>
-                  </div>
-                </li>
-              <li class="carousel-slide carousel-two hide-carousel" data-carousel-target="slidetwo">
-                <div class="review-text">
-                    <p>"<%= @reviews.second.description %>"</p>
-                    <p> - <%= @reviews.second.name %></p>
-                </div>
-              </li>
-              <li class="carousel-slide carousel-three hide-carousel" data-carousel-target="slidethree">
-                <div class="review-text">
-                    <p>"<%= @reviews.third.description %>"</p>
-                    <p> - <%= @reviews.third.name %></p>
-                </div>
-              </li>
-          </ul>
-        </div>
-      <button class = "carousel-arrow carousel-arrow-right" data-action="click->carousel#right"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
+  <div class="testimonial-wrap">
+    <h3 class="home-header">Testimonials</h3>
+    <div class=total-carousel-wrap>
+          <div class="carousel-container">
+            <button class = "carousel-arrow carousel-arrow-left" data-action="click->carousel#left"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
+              <div class="carousel-track-wrapper">
+                <ul class="carousel-track">
+                      <li class="carousel-slide corousel-one active-slide" data-carousel-target="slideone">
+                        <div class="review-text">
+                          <p>"<%= @reviews.first.description %>"</p>
+                          <p> - <%= @reviews.first.name %></p>
+                        </div>
+                      </li>
+                    <li class="carousel-slide carousel-two hide-carousel" data-carousel-target="slidetwo">
+                      <div class="review-text">
+                          <p>"<%= @reviews.second.description %>"</p>
+                          <p> - <%= @reviews.second.name %></p>
+                      </div>
+                    </li>
+                    <li class="carousel-slide carousel-three hide-carousel" data-carousel-target="slidethree">
+                      <div class="review-text">
+                          <p>"<%= @reviews.third.description %>"</p>
+                          <p> - <%= @reviews.third.name %></p>
+                      </div>
+                    </li>
+                </ul>
+              </div>
+            <button class = "carousel-arrow carousel-arrow-right" data-action="click->carousel#right"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-indicator indicator-one active-indicator" data-action="click->carousel#indicatorOne" data-carousel-target="indicatorone"></button>
+            <button class="carousel-indicator indicator-two" data-action="click->carousel#indicatorTwo" data-carousel-target="indicatortwo"></button>
+            <button class="carousel-indicator indicator-three" data-action="click->carousel#indicatorThree" data-carousel-target="indicatorthree"></button>
+          </div>
     </div>
-    <div class="carousel-nav">
-        <button class="carousel-indicator indicator-one active-indicator" data-action="click->carousel#indicatorOne" data-carousel-target="indicatorone"></button>
-        <button class="carousel-indicator indicator-two" data-action="click->carousel#indicatorTwo" data-carousel-target="indicatortwo"></button>
-        <button class="carousel-indicator indicator-three" data-action="click->carousel#indicatorThree" data-carousel-target="indicatorthree"></button>
-      </div>
   </div>
 </div>
 
