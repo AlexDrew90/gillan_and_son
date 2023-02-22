@@ -12,6 +12,11 @@
   padding: 0 0 3vh 0;
 }
 
+.container-contact-page{
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
 .contact-method-list{
   list-style: none;
   margin: 3vh 0;
@@ -85,8 +90,6 @@
 }
 
 .contact-hours-list{
-  list-style: none;
-  text-align: left;
   font-size: 1.5rem;
 }
 
@@ -101,10 +104,14 @@
   width: 100%;
 }
 
-.contact-info-list-item{
-  align-items: center;
-  display: flex;
-  padding-bottom: 5px;
+.opening-time-left{
+  padding: 5px;
+  text-align: center;
+}
+
+.opening-time-right{
+  padding: 5px;
+  text-align: center;
 }
 
 .contact-info-map{
