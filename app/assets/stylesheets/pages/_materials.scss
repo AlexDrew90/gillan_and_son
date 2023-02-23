@@ -24,6 +24,45 @@
   background-color: #FDF9FA;
 }
 
+.materials-tab-pointer-track-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.materials-tab-pointer-track{
+  position:relative;
+}
+.materials-tab-pointer{
+  // height: 30px;
+  // width: 30px;
+  // transform: rotate(45deg);
+  // background-color: #ECF1FB;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #3c035d;
+}
+
+.pointer-granite{
+  top: 50px;
+  left: -125px;
+  transition-duration: 1s;
+}
+
+.pointer-quartz{
+  top: 50px;
+  left: -17px;
+  transition-duration: 1s;
+}
+
+.pointer-ceramic{
+  top: 50px;
+  left: 88px;
+  transition-duration: 1s;
+}
+
 .materials-tab-list{
   display: flex;
   justify-content: center;
@@ -31,7 +70,7 @@
   padding: 0;
   li{
     list-style: none;
-    padding: 3vh 4vw 3vh 4vw;
+    padding: 2vh 20px 3vh 20px;
     font-size: 2rem;
     cursor: pointer;
   }
@@ -103,5 +142,4 @@
 .selected-material{
   font-weight: bold;
   color: #3c035d;
-  text-decoration: underline;
 }
