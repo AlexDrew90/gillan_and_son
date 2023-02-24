@@ -40,27 +40,30 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   border-top: 15px solid #3c035d;
 }
 
 .pointer-granite{
   top: 50px;
-  left: -125px;
-  transition-duration: 1s;
+  left: -121px;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-out;
 }
 
 .pointer-quartz{
   top: 50px;
-  left: -17px;
-  transition-duration: 1s;
+  left: -15px;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-out;
 }
 
 .pointer-ceramic{
   top: 50px;
-  left: 88px;
-  transition-duration: 1s;
+  left: 95px;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-out;
 }
 
 .materials-tab-list{
