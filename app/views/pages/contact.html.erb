@@ -10,11 +10,20 @@
             <div class="contact-info-left">
             <h3>&mdash; Direct contact &mdash;</h3>
               <div class="contact-info-left-inner">
-                <ul class="contact-method-list">
-                  <li class="contact-info-list-item"><i class="fa-solid fa-phone fa-3x contact-icons"></i><span class ="contact-info">0161 205 1827</span></li>
-                  <li class="contact-info-list-item"><i class="fa-solid fa-mobile-screen fa-3x contact-icons"></i><span class ="contact-info">07968 312 915</span></li>
-                  <li class="contact-info-list-item"><i class="fa-solid fa-envelope fa-3x contact-icons"></i><span class ="contact-info">info@hdgranite.co.uk</span></li>
-                </ul>
+                <table class="contact-method-list">
+                      <tr>
+                        <td class="contact-info-list-item"><i class="fa-solid fa-phone fa-3x contact-icons"></i></td>
+                        <td class="contact-info">0161 205 1827</td>
+                      </tr>
+                      <tr>
+                        <td class="contact-info-list-item"><i class="fa-solid fa-mobile-screen fa-3x contact-icons"></td>
+                        <td class="contact-info">07968 312 915</td>
+                      </tr>
+                      <tr>
+                        <td class="contact-info-list-item"><i class="fa-solid fa-envelope fa-3x contact-icons"></td>
+                        <td class="contact-info">info@hdgranite.co.uk</td>
+                      </tr>
+                  </table>
               </div>
             </div>
           </div>
@@ -33,6 +42,9 @@
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="contact-info-map">
               <div id='map' data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+              </div>
+              <div class="showroom-image">
+                <%= image_tag "showroom.png", class:"showroom-image" %>
               </div>
             </div>
             <div class="contact-address">
