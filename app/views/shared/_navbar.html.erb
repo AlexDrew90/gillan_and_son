@@ -1,7 +1,9 @@
 <div class="navbar-gs">
   <div class="navbar-wrap">
     <div class="navbar-logo">
-      <p>Gillan<br>& son</p>
+      <%= link_to(root_path, class: "nav-link") do %>
+      Gillan<br>& son
+      <% end %>
     </div>
       <div class="dropdown-element" data-controller="navlist">
         <button type="button" class="dropdown-button">
@@ -20,3 +22,8 @@
       </div>
   </div>
 </div>
+
+
+<%= link_to(root_path, class: "nav-link") do %>
+  Gillan<br>& son
+<% end %>
