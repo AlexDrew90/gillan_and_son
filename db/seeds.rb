@@ -9,6 +9,9 @@
 Review.destroy_all
 Material.destroy_all
 Brand.destroy_all
+GalleryItem.destroy_all
+
+GalleryItem.create!(photos: "Gallery_image_1.jpeg")
 
 Review.create!(name: "Rob", description: "We had quartz fitted today and the guys did a great job. The largest piece was too big to go in the lift so they had to carry it up the stairs. We are on the the third floor - ouch!!", rating: 5)
 Review.create!(name: "Gill", description: "Highly recommend HD granite - excellent job with experienced fitters - very friendly team and have had lots of compliments about my worktops.", rating: 5)
