@@ -22,9 +22,13 @@
 }
 
 .navbar-logo{
-  margin: 25px 20px 20px 5vw;
+  margin: 20px 20px 20px 5vw;
   font-family: Dancing Script;
   font-size: large;
+}
+
+.navbar-logo:hover{
+  a{text-decoration: none;}
 }
 
 .dropdown-button{
@@ -124,7 +128,7 @@
   .navbar-logo{
     font-family: Dancing Script;
     font-size: medium;
-    margin: 30px 20px 20px 6vw;
+    margin: 22px 20px 20px 6vw;
   }
 
   .hide-nav-list{
