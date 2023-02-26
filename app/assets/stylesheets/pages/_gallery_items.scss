@@ -1,10 +1,21 @@
-.gallery-wrapper-section{
-  padding: 10vh;
+.gallery-intro-section{
+  width: 90vw;
+  margin: 2vh 5vw 2vh 5vw;
+  padding: 10vh 0 1vh 0;
+  p{
+    padding: 2vh 0 2vh 0;
+    font-size: 2rem;
+  }
 }
 
-
 .gallery-tile{
-  height: 200px;
-  width: 250px;
+  height: 100px;
+  width: 150px;
   object-fit: cover;
+  margin-bottom: 2vh;
+  border: solid transparent 2px;
+}
+
+.gallery-tile:hover{
+  border: solid #3c035d 2px;
 }
