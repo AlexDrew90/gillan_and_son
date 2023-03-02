@@ -52,10 +52,10 @@
               <% sorted_materials.find_all { |obj| obj.material_type == "Quartz"}.each do |material| %>
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                   <div class="material-tile-wrapper">
-                  <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+                  <%= image_tag("materials/#{material.photo}", class:"materials-tile") %>
                   <% find_brand = material.brand_id  %>
                   <span class="brand-tile-overlay">
-                    <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+                    <%= image_tag("brands/#{@brands.find(find_brand).logo}") %>
                   </span>
                   <p><%= "#{material.name}"%></p>
                   </div>
@@ -75,10 +75,10 @@
               <% sorted_materials.find_all { |obj| obj.material_type == "Ceramic"}.each do |material| %>
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                   <div class="material-tile-wrapper">
-                  <%= link_to image_tag("materials/#{material.photo}", class:"materials-tile") %>
+                  <%= image_tag("materials/#{material.photo}", class:"materials-tile") %>
                   <% find_brand = material.brand_id  %>
                   <span class="brand-tile-overlay">
-                    <%= link_to image_tag("brands/#{@brands.find(find_brand).logo}") %>
+                    <%= image_tag("brands/#{@brands.find(find_brand).logo}") %>
                   </span>
                   <p><%= "#{material.name}"%></p>
                   </div>
