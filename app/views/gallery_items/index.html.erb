@@ -5,9 +5,8 @@
   </div>
   <div class ="gallery-display-wrapper" data-controller="gallery">
     <div class="expand-wrap">
-      <%= image_tag("gallery/Gallery_image_1.jpeg", class:"expanded-image") %>
     </div>
-    <div class="container">
+    <div class="container small-images-wrap">
       <div class="row gallery-row">
       <% @gallery_items.each do |photo| %>
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 gallery-item" data-action="click->gallery#expand">
