@@ -21,6 +21,11 @@
   animation: zoom 0.3s ease-in-out;
 }
 
+.modal img {
+  width: 50%;
+  object-fit: cover;
+}
+
 @keyframes zoom {
   from {
       transform: scale(0);

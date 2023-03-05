@@ -6,14 +6,18 @@ export default class extends Controller {
   }
 
   expand() {
-    console.log("Expand");
-    let imgModal = () => {
+    let imageSource = this.element.childNodes[1].src;
+    let imgModal = (imageSource) => {
       const modal = document.createElement("div");
       modal.setAttribute("class", "modal");
       //add the modal to the main section or the parent element
       document.querySelector(".expand-wrap").append(modal);
+      //adding image to modal
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", imageSource);
+    modal.append(newImage)
   };
-  imgModal();
+  imgModal(imageSource);
   }
 
 }
