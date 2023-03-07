@@ -16,6 +16,14 @@ export default class extends Controller {
     const newImage = document.createElement("img");
     newImage.setAttribute("src", imageSource);
     modal.append(newImage)
+    //creating the close button
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    //close function
+    closeBtn.onclick = () => {
+    modal.remove();
+};
+modal.append(newImage, closeBtn);
   };
   imgModal(imageSource);
   }
