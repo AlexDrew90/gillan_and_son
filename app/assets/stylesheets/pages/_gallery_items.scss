@@ -26,6 +26,21 @@
   object-fit: cover;
 }
 
+.closeBtn {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+  color: rgb(255, 255, 255);
+}
+
 @keyframes zoom {
   from {
       transform: scale(0);
@@ -78,5 +93,9 @@
   .gallery-tile{
     height: 200px;
     width: 300px;
+  }
+
+  .modal img {
+    width: 80%;
   }
 }
