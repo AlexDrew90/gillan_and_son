@@ -16,15 +16,22 @@ export default class extends Controller {
     const newImage = document.createElement("img");
     newImage.setAttribute("src", imageSource);
     modal.append(newImage)
-    //creating the close button
+    //adding the navigation and close buttons to modal
+    const leftArrow = document.createElement("i");
+    leftArrow.setAttribute("class", "fas fa-angle-left prevBtn");
     const closeBtn = document.createElement("i");
     closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    const rightArrow = document.createElement("i");
+    rightArrow.setAttribute("class", "fas fa-angle-right nextBtn");
+
+
     //close function
     closeBtn.onclick = () => {
-    modal.remove();
-};
-modal.append(newImage, closeBtn);
+    modal.remove();};
+
+  modal.append(leftArrow, newImage, rightArrow, closeBtn);
   };
+
   imgModal(imageSource);
   }
 
