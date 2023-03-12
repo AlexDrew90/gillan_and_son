@@ -6,6 +6,8 @@ export default class extends Controller {
   }
 
   expand() {
+    let imageTiles = document.getElementsByClassName("gallery-tile");
+    console.log(imageTiles);
     let imageSource = this.element.childNodes[1].src;
     let imgModal = (imageSource) => {
       const modal = document.createElement("div");
