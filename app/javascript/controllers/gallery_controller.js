@@ -6,8 +6,6 @@ export default class extends Controller {
   }
 
   expand() {
-    let imageTiles = document.getElementsByClassName("gallery-tile");
-    console.log(imageTiles);
     let imageSource = this.element.childNodes[1].src;
     let imgModal = (imageSource) => {
       const modal = document.createElement("div");
@@ -25,6 +23,19 @@ export default class extends Controller {
     closeBtn.setAttribute("class", "fas fa-times closeBtn");
     const rightArrow = document.createElement("i");
     rightArrow.setAttribute("class", "fas fa-angle-right nextBtn");
+
+
+    rightArrow.onclick = () => {
+    newImage.setAttribute("src", nextSource)
+    };
+
+    let imageTiles = document.getElementsByClassName("gallery-tile");
+    console.log(imageTiles);
+
+    for (const element of imageTiles) {
+      console.log(element.src);
+    }
+
 
 
     //close function
