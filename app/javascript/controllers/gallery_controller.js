@@ -31,11 +31,13 @@ export default class extends Controller {
 
     let imageTiles = document.getElementsByClassName("gallery-tile");
     console.log(imageTiles);
+    let imageSrcArray = [];
 
     for (const element of imageTiles) {
       console.log(element.src);
+      imageSrcArray.push(element.src);
     }
-
+    console.log(imageSrcArray);
 
 
     //close function
