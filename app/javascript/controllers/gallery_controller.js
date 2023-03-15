@@ -25,19 +25,23 @@ export default class extends Controller {
     rightArrow.setAttribute("class", "fas fa-angle-right nextBtn");
 
 
-    rightArrow.onclick = () => {
-    newImage.setAttribute("src", nextSource)
-    };
-
     let imageTiles = document.getElementsByClassName("gallery-tile");
     console.log(imageTiles);
     let imageSrcArray = [];
+    console.log(imageSource);
 
     for (const element of imageTiles) {
-      console.log(element.src);
       imageSrcArray.push(element.src);
     }
     console.log(imageSrcArray);
+    let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+    console.log(indexOfCurrentImage);
+    let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
+
+    rightArrow.onclick = () => {
+      newImage.setAttribute("src", nextSource)
+      let indexOfCurrentImage = (indexOfCurrentImage + 1)
+      };
 
 
     //close function
