@@ -23,6 +23,7 @@ export default class extends Controller {
     closeBtn.setAttribute("class", "fas fa-times closeBtn");
     const rightArrow = document.createElement("i");
     rightArrow.setAttribute("class", "fas fa-angle-right nextBtn");
+    rightArrow.setAttribute("data-action", "click->gallery#rightImageButton");
 
 
     let imageTiles = document.getElementsByClassName("gallery-tile");
@@ -33,15 +34,15 @@ export default class extends Controller {
     for (const element of imageTiles) {
       imageSrcArray.push(element.src);
     }
-    console.log(imageSrcArray);
-    let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
-    console.log(indexOfCurrentImage);
-    let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
+    // console.log(imageSrcArray);
+    // let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+    // console.log(indexOfCurrentImage);
+    // let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
 
-    rightArrow.onclick = () => {
-      newImage.setAttribute("src", nextSource)
-      let indexOfCurrentImage = (indexOfCurrentImage + 1)
-      };
+    // rightArrow.onclick = () => {
+    //   newImage.setAttribute("src", nextSource)
+    //   let indexOfCurrentImage = (indexOfCurrentImage + 1)
+    //   };
 
 
     //close function
@@ -52,6 +53,15 @@ export default class extends Controller {
   };
 
   imgModal(imageSource);
+  }
+
+  rightImageButton() {
+    console.log(imageSrcArray);
+    let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+    console.log(indexOfCurrentImage);
+    let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
+    newImage.setAttribute("src", nextSource)
+    indexOfCurrentImage = (indexOfCurrentImage + 1)
   }
 
 }
