@@ -34,15 +34,21 @@ export default class extends Controller {
     for (const element of imageTiles) {
       imageSrcArray.push(element.src);
     }
-    // console.log(imageSrcArray);
-    // let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
-    // console.log(indexOfCurrentImage);
-    // let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
 
-    // rightArrow.onclick = () => {
-    //   newImage.setAttribute("src", nextSource)
-    //   let indexOfCurrentImage = (indexOfCurrentImage + 1)
-    //   };
+
+    leftArrow.onclick = () => {
+      let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+      let prevSource = imageSrcArray[(indexOfCurrentImage-1)]
+      newImage.setAttribute("src", prevSource)
+      imageSource = prevSource
+      };
+
+    rightArrow.onclick = () => {
+      let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+      let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
+      newImage.setAttribute("src", nextSource)
+      imageSource = nextSource
+      };
 
 
     //close function
@@ -55,13 +61,13 @@ export default class extends Controller {
   imgModal(imageSource);
   }
 
-  rightImageButton() {
-    console.log(imageSrcArray);
-    let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
-    console.log(indexOfCurrentImage);
-    let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
-    newImage.setAttribute("src", nextSource)
-    indexOfCurrentImage = (indexOfCurrentImage + 1)
-  }
+  // rightImageButton() {
+  //   console.log(imageSrcArray);
+  //   let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+  //   console.log(indexOfCurrentImage);
+  //   let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
+  //   newImage.setAttribute("src", nextSource)
+  //   indexOfCurrentImage = (indexOfCurrentImage + 1)
+  // }
 
 }
