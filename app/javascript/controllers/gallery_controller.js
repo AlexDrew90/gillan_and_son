@@ -38,16 +38,26 @@ export default class extends Controller {
 
     leftArrow.onclick = () => {
       let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
-      let prevSource = imageSrcArray[(indexOfCurrentImage-1)]
-      newImage.setAttribute("src", prevSource)
-      imageSource = prevSource
+      let galleryLength = imageSrcArray.length
+      let prevSource = imageSrcArray[(indexOfCurrentImage-1)];
+      if(indexOfCurrentImage == 0) {
+        prevSource = imageSrcArray[galleryLength-1]
+      }
+      newImage.setAttribute("src", prevSource);
+      imageSource = prevSource;
+      console.log(indexOfCurrentImage);
       };
 
     rightArrow.onclick = () => {
       let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
+      let galleryLength = imageSrcArray.length
       let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
+        if(indexOfCurrentImage == (galleryLength-1)) {
+          nextSource = imageSrcArray[0]
+        }
       newImage.setAttribute("src", nextSource)
       imageSource = nextSource
+      console.log(indexOfCurrentImage);
       };
 
 
