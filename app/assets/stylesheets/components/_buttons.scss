@@ -34,6 +34,14 @@
   color: #14B8B5;
 }
 
+.button-primary:active, .button-primary:visited, .button-primary:focus{
+  text-decoration: none;
+}
+
+.button-secondary:active, .button-secondary:visited, .button-secondary:focus{
+  text-decoration: none;
+}
+
 .button-div{
   padding-top: 2vh;
 }
