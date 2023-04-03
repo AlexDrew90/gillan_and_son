@@ -14,6 +14,9 @@
   border-radius: 15px;
   text-align: center;
   padding: 35px;
+    p{
+    font-size: 1.5rem;
+  }
 }
 
 .requirements-steps-outer{
@@ -40,9 +43,6 @@
 
 .requirement:hover{
   background-color: #fffdfd;
-  i{
-
-  }
 }
 
 .requirement-icons{
@@ -54,6 +54,15 @@
 .requirement-name{
   p{
     font-size: 1.5rem;
+    font-weight: 600;
     margin: 0 !important;
   }
+}
+
+@media (max-width: 575px) {
+
+  .requirement{
+    width: 80vw;
+  }
+
 }
