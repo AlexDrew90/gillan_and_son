@@ -2,7 +2,7 @@
   <h3 class="home-header">Get a quote</h3>
   <p>Let us know what you are looking for and we'll get back to you with our best estimate.</p>
 </div>
-<div class="container">
+<div class="container requirement-steps-wrapper">
       <div class="row">
           <div class="col-md-4 col-sm-12 requirements-steps-outer">
             <div class="requirements-steps requirement-step-one">
@@ -28,7 +28,7 @@
       </div>
 </div>
 <div class="quote-build-wrapper">
-  <div class="quote-build-left"></div>
+  <div class="quote-build-left">
   <% @requirements.each do |requirement|  %>
     <div class="requirement">
       <div class="requirement-question"><i class="fa-solid fa-circle-question requirement-icons fa-3x"></i></div>
@@ -36,5 +36,8 @@
       <div class="requirement-plus"><i class="fa-solid fa-circle-plus requirement-icons fa-3x"></i></div>
     </div>
     <% end %>
-  <div class="quote-build-right"></div>
+    </div>
+  <div class="quote-build-right">
+  <p>< Please select some requirments ></p>
+  </div>
 </div>

@@ -84,8 +84,9 @@
 }
 
 .gallery-tile{
-  height: 120px;
+  height: 140px;
   width: 220px;
+  border-radius: 5px;
   object-fit: cover;
   margin-bottom: 2vh;
   border: solid transparent 2px;
@@ -107,10 +108,17 @@ font-weight: bold;
 text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .gallery-tile{
-    height: 175px;
-    width: 250px;
+    height: 110px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-tile{
+    height: 150px;
+    width: 220px;
   }
 }
 
