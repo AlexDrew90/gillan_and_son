@@ -102,3 +102,9 @@
      left: 3vw;
     }
 }
+
+@media (max-height: 850px) {
+  .review-text{
+    font-size: 1.25rem;
+  }
+}

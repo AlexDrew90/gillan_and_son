@@ -54,7 +54,11 @@
 }
 
 .requirement:hover{
-  background-color: #fffdfd;
+  // background-color: #fffdfd;
+  border: solid #14B8B5 2px;
+  div i{
+    color:#14B8B5;
+  }
 }
 
 .requirement-icons{
