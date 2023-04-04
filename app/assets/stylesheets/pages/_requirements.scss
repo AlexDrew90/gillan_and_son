@@ -1,11 +1,15 @@
 .requirements-intro-section{
   width: 90vw;
-  margin: 2vh 5vw 2vh 5vw;
+  margin: 2vh 5vw 0vh 5vw;
   padding: 10vh 0 1vh 0;
   p{
     padding: 2vh 0 2vh 0;
     font-size: 2rem;
   }
+}
+
+.requirement-steps-wrapper{
+  padding-bottom: 2vh;
 }
 
 .requirements-steps{
@@ -26,6 +30,9 @@
 
 .quote-build-wrapper{
   margin: 2vh 5vw 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .requirement{
@@ -39,6 +46,11 @@
   justify-content:space-between;
   align-items: center;
   border: solid #3c035d 2px;
+}
+
+.quote-build-right{
+  width: 40vw;
+  text-align: center;
 }
 
 .requirement:hover{
@@ -59,10 +71,17 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
 
   .requirement{
     width: 80vw;
+  }
+
+  .quote-build-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
   }
 
 }
