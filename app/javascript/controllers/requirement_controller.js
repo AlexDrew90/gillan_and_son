@@ -3,8 +3,19 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
 export default class extends Controller {
   connect() {
-  }
+    let slideshowElements = document.getElementsByClassName("requirement-demo-slideshow");
+    console.log(slideshowElements);
 
+    let arrayLength = slideshowElements.length;
+    for (var i = 0; i < arrayLength; i++) {
+    console.log(slideshowElements[i]);
+    slideshowElements[i].classList.remove("hide-slide-image");
+}
+    for (var i = 0; i < arrayLength; i++) {
+    console.log(slideshowElements[i]);
+    slideshowElements[i].classList.add("hide-slide-image");
+}
+  }
 
 expand() {
   window.onclick = e => {

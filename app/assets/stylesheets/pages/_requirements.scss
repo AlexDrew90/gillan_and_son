@@ -31,7 +31,7 @@
 .quote-build-wrapper{
   margin: 2vh 5vw 2vh 5vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -59,6 +59,11 @@
 
 .requirement-demo-slideshow{
   width: 100%;
+}
+
+.hide-slide-image{
+  visibility: hidden;
+  height: 0;
 }
 
 .requirement:hover{
