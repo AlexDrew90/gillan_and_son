@@ -39,5 +39,10 @@
     </div>
   <div class="quote-build-right">
   <p>< Please select some requirments ></p>
+    <div class="requirement-demo-slideshow-container">
+      <% @requirements.each do |requirement|  %>
+        <%= image_tag("requirements/#{requirement.photo}", class:"requirement-demo-slideshow") %>
+      <% end %>
+    </div>
   </div>
 </div>
