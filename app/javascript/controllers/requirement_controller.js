@@ -5,16 +5,16 @@ export default class extends Controller {
   connect() {
     let slideshowElements = document.getElementsByClassName("requirement-demo-slideshow");
     console.log(slideshowElements);
-
+    let currentSlide = 0
     let arrayLength = slideshowElements.length;
-    for (var i = 0; i < arrayLength; i++) {
-    console.log(slideshowElements[i]);
-    slideshowElements[i].classList.remove("hide-slide-image");
-}
-    for (var i = 0; i < arrayLength; i++) {
-    console.log(slideshowElements[i]);
-    slideshowElements[i].classList.add("hide-slide-image");
-}
+    slideshowElements[currentSlide].classList.remove("hide-slide-image");
+    function changeSlide() {
+      slideshowElements[currentSlide].classList.add("hide-slide-image");
+      currentSlide = (currentSlide + 1) % arrayLength;
+      slideshowElements[currentSlide].classList.remove("hide-slide-image");
+  }
+  setInterval(changeSlide, 3000);
+
   }
 
 expand() {
