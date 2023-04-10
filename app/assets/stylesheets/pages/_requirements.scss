@@ -54,16 +54,18 @@
 }
 
 .requirement-demo-slideshow-container{
-  width: 90%;
+  padding: 0 10% 0 10%;
 }
 
 .requirement-demo-slideshow{
   width: 100%;
+  border-radius: 5px;
 }
 
 .hide-slide-image{
   visibility: hidden;
   height: 0;
+  width: 0;
 }
 
 .requirement:hover{
