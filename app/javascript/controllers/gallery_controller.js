@@ -13,23 +13,21 @@ export default class extends Controller {
       //add the modal to the main section or the parent element
       document.querySelector(".expand-wrap").append(modal);
       //adding image to modal
-    const newImage = document.createElement("img");
-    newImage.setAttribute("src", imageSource);
-    modal.append(newImage)
-    //adding the navigation and close buttons to modal
-    const leftArrow = document.createElement("i");
-    leftArrow.setAttribute("class", "fas fa-angle-left prevBtn");
-    const closeBtn = document.createElement("i");
-    closeBtn.setAttribute("class", "fas fa-times closeBtn");
-    const rightArrow = document.createElement("i");
-    rightArrow.setAttribute("class", "fas fa-angle-right nextBtn");
-    rightArrow.setAttribute("data-action", "click->gallery#rightImageButton");
-
-
-    let imageTiles = document.getElementsByClassName("gallery-tile");
-    console.log(imageTiles);
-    let imageSrcArray = [];
-    console.log(imageSource);
+      const newImage = document.createElement("img");
+      newImage.setAttribute("src", imageSource);
+      modal.append(newImage)
+      //adding the navigation and close buttons to modal
+      const leftArrow = document.createElement("i");
+      leftArrow.setAttribute("class", "fas fa-angle-left prevBtn");
+      const closeBtn = document.createElement("i");
+      closeBtn.setAttribute("class", "fas fa-times closeBtn");
+      const rightArrow = document.createElement("i");
+      rightArrow.setAttribute("class", "fas fa-angle-right nextBtn");
+      rightArrow.setAttribute("data-action", "click->gallery#rightImageButton");
+      let imageTiles = document.getElementsByClassName("gallery-tile");
+      console.log(imageTiles);
+      let imageSrcArray = [];
+      console.log(imageSource);
 
     for (const element of imageTiles) {
       imageSrcArray.push(element.src);

@@ -27,15 +27,15 @@
           </div>
       </div>
 </div>
-<div class="quote-build-wrapper" data-controller="requirement">
+<div class="quote-build-wrapper">
   <div class="quote-build-left">
   <% @requirements.each do |requirement|  %>
     <div class="requirement">
-      <div class="requirement-question"><i id="<%= requirement.photo %>" class="fa-solid fa-circle-question requirement-icons fa-3x" data-action="click->requirement#expand"></i></div>
+      <div class="requirement-question"><i data-photo-url="<%= requirement.photo %>" class="fa-solid fa-circle-question requirement-icons fa-3x" data-controller="requirement"></i></div>
       <div class="requirement-name"><p><%= requirement.name %></p></div>
       <div class="requirement-plus"><i class="fa-solid fa-circle-plus requirement-icons fa-3x"></i></div>
     </div>
-    <% end %>
+  <% end %>
     </div>
   <div class="quote-build-right">
   <p>< Please select some requirments ></p>
