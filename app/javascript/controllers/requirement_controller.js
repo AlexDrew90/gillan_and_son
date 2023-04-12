@@ -57,5 +57,28 @@ export default class extends Controller {
 
 
 
+  toggleRequirement(e) {
+    // Check if the click event was triggered by the "requirement-question" element or any of its children
+    if (e.target.closest(".requirement-question") || e.target.closest(".requirement-question *")) {
+      return;
+    }
+
+    // Find the "quote-build-right" element
+    const quoteBuildRight = document.querySelector(".quote-build-right");
+
+    // Hide the current content and clear the container
+    quoteBuildRight.innerHTML = '';
+
+    // Get the selected requirement's content
+    const selectedRequirementContent = e.currentTarget.querySelector(".requirement-name p").textContent;
+
+    // Create a new div to display the selected requirement's content
+    const selectedRequirementDiv = document.createElement("div");
+    selectedRequirementDiv.textContent = selectedRequirementContent;
+
+    // Append the selected requirement's content to the "quote-build-right" container
+    quoteBuildRight.appendChild(selectedRequirementDiv);
+  }
+
 
 }
