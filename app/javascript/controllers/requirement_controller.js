@@ -28,7 +28,8 @@ export default class extends Controller {
 
 
   expand(e) {
-    if (e.target.classList.contains("requirement-icons")) {
+    if (e.target.classList.contains("question-image")) {
+      console.log("Hello");
       let imageSource = `/assets/requirements/${e.target.dataset.photoUrl}`;
       const modal = document.createElement("div");
       modal.setAttribute("class", "modal");
@@ -74,6 +75,7 @@ export default class extends Controller {
 
     // Create a new div to display the selected requirement's content
     const selectedRequirementDiv = document.createElement("div");
+    selectedRequirementDiv.setAttribute("class", "selected-requirement");
     selectedRequirementDiv.textContent = selectedRequirementContent;
 
     // Append the selected requirement's content to the "quote-build-right" container
