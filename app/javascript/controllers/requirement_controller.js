@@ -7,13 +7,13 @@ export default class extends Controller {
     let currentSlideCounter = 0;
     slideshowElements[currentSlideCounter].classList.remove("hide-slide-image");
     let arrayLength = slideshowElements.length;
-
     function changeSlide() {
+      if(slideshowElements.length > 0){
       slideshowElements[currentSlideCounter].classList.add("hide-slide-image");
       currentSlideCounter = (currentSlideCounter + 1) % arrayLength;
       slideshowElements[currentSlideCounter].classList.remove("hide-slide-image");
     }
-
+  }
     this.slideChangeInterval = setInterval(changeSlide, 4000);
 
     // Attach event listener for expand method
