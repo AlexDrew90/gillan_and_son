@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
 export default class extends Controller {
+  selectedRequirmentArray = [];
   connect() {
     // Slideshow functionality
     let slideshowElements = document.getElementsByClassName("requirement-demo-slideshow");
@@ -18,12 +19,14 @@ export default class extends Controller {
 
     // Attach event listener for expand method
     this.element.addEventListener("click", this.expand.bind(this));
+    this.element.addEventListener("click", this.toggleRequirement.bind(this));
   }
 
 
   disconnect() {
     clearInterval(this.slideChangeInterval);
     this.element.removeEventListener("click", this.expand.bind(this));
+     this.element.removeEventListener("click", this.toggleRequirement.bind(this));
   }
 
 
@@ -57,8 +60,8 @@ export default class extends Controller {
   }
 
 
-
   toggleRequirement(e) {
+
     // Check if the click event was triggered by the "requirement-question" element or any of its children
     if (e.target.closest(".requirement-question") || e.target.closest(".requirement-question *")) {
       return;
@@ -71,7 +74,10 @@ export default class extends Controller {
     quoteBuildRight.innerHTML = '';
 
     // Get the selected requirement's content
-    const selectedRequirementContent = e.currentTarget.querySelector(".requirement-name p").textContent;
+    // const selectedRequirementContent = e.currentTarget.querySelector(".requirement-name p").textContent;
+    let selectedRequirementContent = e.currentTarget
+    this.selectedRequirmentArray.push(`${selectedRequirementContent}`)
+    console.log(this.selectedRequirmentArray);
 
     // Create a new div to display the selected requirement's content
     const selectedRequirementDiv = document.createElement("div");
@@ -80,6 +86,8 @@ export default class extends Controller {
 
     // Append the selected requirement's content to the "quote-build-right" container
     quoteBuildRight.appendChild(selectedRequirementDiv);
+
+
   }
 
 
