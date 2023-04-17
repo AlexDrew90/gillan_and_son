@@ -51,6 +51,7 @@
 .quote-build-right{
   text-align: center;
   padding: 1vh 1vw 3vh 1vw;
+  width: 40vw;
 }
 
 .requirement-demo-slideshow-container{
@@ -90,6 +91,10 @@
   }
 }
 
+.selected-requirement{
+  width: 100%;
+}
+
 @media (max-width: 767px) {
 
   .requirement{
@@ -101,6 +106,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
+  }
+
+  .quote-build-right{
+    width: 80vw;
   }
 
 }

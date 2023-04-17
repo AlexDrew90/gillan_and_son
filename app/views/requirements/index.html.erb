@@ -32,7 +32,7 @@
     <% @requirements.each do |requirement|  %>
       <div class="requirement" data-controller="requirement" data-action="click->requirement#toggleRequirement">
         <div class="requirement-question">
-          <i data-photo-url="<%= requirement.photo %>" class="fa-solid fa-circle-question requirement-icons fa-3x"></i>
+          <i data-photo-url="<%= requirement.photo %>" class="fa-solid fa-circle-question requirement-icons question-image fa-3x"></i>
         </div>
         <div class="requirement-name"><p><%= requirement.name %></p></div>
         <div class="requirement-plus"><i class="fa-solid fa-circle-plus requirement-icons fa-3x"></i></div>
