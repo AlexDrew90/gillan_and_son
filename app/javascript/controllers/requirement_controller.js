@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
+window.selectedRequirmentArray = [];
 export default class extends Controller {
-  selectedRequirmentArray = [];
   connect() {
     // Slideshow functionality
     let slideshowElements = document.getElementsByClassName("requirement-demo-slideshow");
@@ -17,16 +17,24 @@ export default class extends Controller {
   }
     this.slideChangeInterval = setInterval(changeSlide, 4000);
 
-    // Attach event listener for expand method
-    this.element.addEventListener("click", this.expand.bind(this));
-    this.element.addEventListener("click", this.toggleRequirement.bind(this));
+   // Attach event listener for expand method to elements with class "question-image"
+   let questionImages = this.element.querySelectorAll(".question-image");
+   questionImages.forEach((image) => {
+     image.addEventListener("click", this.expand.bind(this));
+   });
+
+   // Attach event listener for toggleRequirement method to elements with class "requirement-item"
+   let requirementItems = this.element.querySelectorAll(".requirement");
+   requirementItems.forEach((item) => {
+     item.addEventListener("click", this.toggleRequirement.bind(this));
+   });
   }
 
 
   disconnect() {
     clearInterval(this.slideChangeInterval);
     this.element.removeEventListener("click", this.expand.bind(this));
-     this.element.removeEventListener("click", this.toggleRequirement.bind(this));
+
   }
 
 
@@ -74,10 +82,9 @@ export default class extends Controller {
     quoteBuildRight.innerHTML = '';
 
     // Get the selected requirement's content
-    // const selectedRequirementContent = e.currentTarget.querySelector(".requirement-name p").textContent;
-    let selectedRequirementContent = e.currentTarget
-    this.selectedRequirmentArray.push(`${selectedRequirementContent}`)
-    console.log(this.selectedRequirmentArray);
+    let selectedRequirementContent = e.target.closest(".requirement").querySelector(".requirement-name p").textContent;
+    window.selectedRequirmentArray.push(selectedRequirementContent);
+    console.log(window.selectedRequirmentArray);
 
     // Create a new div to display the selected requirement's content
     const selectedRequirementDiv = document.createElement("div");
