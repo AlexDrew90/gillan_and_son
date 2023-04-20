@@ -48,6 +48,19 @@
   border: solid #3c035d 2px;
 }
 
+.selected-requirement{
+  width: 40vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #FDF9FA;
+  text-align: center;
+  border: solid #3c035d 2px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .quote-build-right{
   text-align: center;
   padding: 1vh 1vw 3vh 1vw;
