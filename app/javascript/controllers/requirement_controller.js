@@ -86,13 +86,17 @@ export default class extends Controller {
     window.selectedRequirmentArray.push(selectedRequirementContent);
     console.log(window.selectedRequirmentArray);
 
-    // Create a new div to display the selected requirement's content
-    const selectedRequirementDiv = document.createElement("div");
-    selectedRequirementDiv.setAttribute("class", "selected-requirement");
-    selectedRequirementDiv.textContent = selectedRequirementContent;
+    selectedRequirmentArray.forEach(element => {
+       // Create a new div to display the selected requirement's content
+       console.log(element);
 
-    // Append the selected requirement's content to the "quote-build-right" container
-    quoteBuildRight.appendChild(selectedRequirementDiv);
+        const selectedRequirementDiv = document.createElement("div");
+        selectedRequirementDiv.setAttribute("class", "selected-requirement");
+        selectedRequirementDiv.textContent = element;
+
+      // Append the selected requirement's content to the "quote-build-right" container
+        quoteBuildRight.appendChild(selectedRequirementDiv);
+  });
 
 
   }
