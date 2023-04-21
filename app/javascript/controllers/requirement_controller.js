@@ -82,7 +82,8 @@ export default class extends Controller {
     quoteBuildRight.innerHTML = '';
 
     // Get the selected requirement's content
-    let selectedRequirementContent = e.target.closest(".requirement").querySelector(".requirement-name p").textContent;
+    // let selectedRequirementContent = e.target.closest(".requirement").querySelector(".requirement-name p").textContent;
+    let selectedRequirementContent = e.target.closest(".requirement");
     window.selectedRequirmentArray.push(selectedRequirementContent);
     console.log(window.selectedRequirmentArray);
 
@@ -92,7 +93,7 @@ export default class extends Controller {
 
         const selectedRequirementDiv = document.createElement("div");
         selectedRequirementDiv.setAttribute("class", "selected-requirement");
-        selectedRequirementDiv.textContent = element;
+        selectedRequirementDiv.textContent = `${element.dataset.name}, ${element.dataset.input}`;
 
       // Append the selected requirement's content to the "quote-build-right" container
         quoteBuildRight.appendChild(selectedRequirementDiv);
