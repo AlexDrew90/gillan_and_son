@@ -49,6 +49,8 @@
 }
 
 .selected-requirement{
+  display: flex;
+  justify-content: flex-start;
   width: 40vw;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -59,6 +61,21 @@
   border: solid #3c035d 2px;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.selected-requirement-image{
+  border-radius: 15px;
+  height: 80px;
+  width: 100px;
+}
+
+.selected-requirement-name{
+  padding-left: 8vw;
+}
+
+.selected-requirement-input{
+  margin-left: 25px;
+  text-align: left;
 }
 
 .quote-build-right{

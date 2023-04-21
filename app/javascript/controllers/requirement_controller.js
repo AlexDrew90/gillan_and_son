@@ -85,18 +85,35 @@ export default class extends Controller {
     // let selectedRequirementContent = e.target.closest(".requirement").querySelector(".requirement-name p").textContent;
     let selectedRequirementContent = e.target.closest(".requirement");
     window.selectedRequirmentArray.push(selectedRequirementContent);
-    console.log(window.selectedRequirmentArray);
 
     selectedRequirmentArray.forEach(element => {
        // Create a new div to display the selected requirement's content
-       console.log(element);
 
         const selectedRequirementDiv = document.createElement("div");
         selectedRequirementDiv.setAttribute("class", "selected-requirement");
-        selectedRequirementDiv.textContent = `${element.dataset.name}, ${element.dataset.input}`;
+
+        const selectedRequirementDivImage = document.createElement("img");
+        selectedRequirementDivImage.setAttribute("class", "selected-requirement-image");
+        selectedRequirementDivImage.setAttribute("src", `/assets/requirements/${element.dataset.photo}`);
+
+        const selectedRequirementDivTextWrap = document.createElement("div");
+        selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
+
+        const selectedRequirementDivName = document.createElement("p");
+        selectedRequirementDivName.setAttribute("class", "selected-requirement-name");
+        selectedRequirementDivName.textContent = element.dataset.name;
+
+        const selectedRequirementDivInput = document.createElement("p");
+        selectedRequirementDivInput.setAttribute("class", "selected-requirement-input");
+        selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
+
 
       // Append the selected requirement's content to the "quote-build-right" container
         quoteBuildRight.appendChild(selectedRequirementDiv);
+        selectedRequirementDiv.appendChild(selectedRequirementDivImage);
+        selectedRequirementDiv.appendChild(selectedRequirementDivTextWrap);
+        selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);
+        selectedRequirementDivTextWrap.appendChild(selectedRequirementDivInput);
   });
 
 
