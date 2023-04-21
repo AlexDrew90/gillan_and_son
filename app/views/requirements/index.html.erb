@@ -30,7 +30,7 @@
 <div class="quote-build-wrapper">
    <div class="quote-build-left">
     <% @requirements.each do |requirement|  %>
-      <div class="requirement" data-controller="requirement" data-action="click->requirement#toggleRequirement">
+      <div class="requirement" data-name="<%= requirement.name %>" data-input="<%= requirement.input %>" data-controller="requirement" data-action="click->requirement#toggleRequirement">
         <div class="requirement-question">
           <i data-photo-url="<%= requirement.photo %>" class="fa-solid fa-circle-question requirement-icons question-image fa-3x"></i>
         </div>
