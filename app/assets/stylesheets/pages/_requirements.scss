@@ -12,6 +12,11 @@
   padding-bottom: 2vh;
 }
 
+.selected-requirement-text-wrap{
+  text-align: left;
+  padding-left: 40px;
+}
+
 .requirements-steps{
   height: 100%;
   background-color: #FDF9FA;
@@ -70,16 +75,15 @@
 }
 
 .selected-requirement-name{
-  padding-left: 8vw;
+  padding-left: 40px;
 }
 
 .selected-requirement-input{
-  margin-left: 25px;
   text-align: left;
 }
 
 .selected-requirement-addition{
-  margin-left: 25px;
+  margin-top: 10px;
   text-align: left;
 }
 
@@ -134,6 +138,14 @@
   width: 28%;
   border: 1.8px solid #3c035d;
   border-radius: 5px;
+}
+
+.input-wrap{
+  text-align: left;
+}
+
+.quantity-input{
+  text-align: left;
 }
 
 @media (max-width: 767px) {
