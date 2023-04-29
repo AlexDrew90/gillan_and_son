@@ -34,6 +34,7 @@ export default class extends Controller {
   disconnect() {
     clearInterval(this.slideChangeInterval);
     this.element.removeEventListener("click", this.expand.bind(this));
+    window.selectedRequirmentArray = [];
 
   }
 
@@ -78,12 +79,21 @@ export default class extends Controller {
     // Find the "quote-build-right" element
     const quoteBuildRight = document.querySelector(".quote-build-right");
 
-    // Hide the current content and clear the container
-    quoteBuildRight.innerHTML = '';
 
     // Get the selected requirement's content
     // let selectedRequirementContent = e.target.closest(".requirement").querySelector(".requirement-name p").textContent;
     let selectedRequirementContent = e.target.closest(".requirement");
+
+
+
+    if((selectedRequirementContent.dataset.input === "Quantity") && (window.selectedRequirmentArray.includes(selectedRequirementContent))){
+      console.log("Quantity already there");
+      alert("You have already added this requirement. If you require more than one, please let us know by updating the quantity field.");
+    }else{
+
+        // Hide the current content and clear the container
+    quoteBuildRight.innerHTML = '';
+
     window.selectedRequirmentArray.push(selectedRequirementContent);
 
     selectedRequirmentArray.forEach(element => {
@@ -118,6 +128,6 @@ export default class extends Controller {
 
 
   }
-
+}
 
 }

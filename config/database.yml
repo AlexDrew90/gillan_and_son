@@ -23,7 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: gillan_and_son_development
+  database: new_gillan_and_son_development
+  host: localhost
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
