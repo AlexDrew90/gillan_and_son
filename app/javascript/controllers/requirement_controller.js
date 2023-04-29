@@ -101,6 +101,8 @@ export default class extends Controller {
       window.selectedRequirmentArray.forEach(element => {
         const numOfElement = multipleRequirmentArray.filter(x => x === element.dataset.name).length;
         const existingElement = document.querySelector(`#text-wrap-${element.dataset.name}`);
+        console.log(numOfElement);
+        console.log(existingElement);
 
         if (numOfElement > 1 && existingElement) {
           const appendInput = document.createElement("p");
