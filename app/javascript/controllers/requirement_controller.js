@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
 window.selectedRequirmentArray = [];
+window.multipleRequirmentArray = [];
 export default class extends Controller {
   connect() {
     // Slideshow functionality
@@ -35,7 +36,7 @@ export default class extends Controller {
     clearInterval(this.slideChangeInterval);
     this.element.removeEventListener("click", this.expand.bind(this));
     window.selectedRequirmentArray = [];
-
+    window.multipleRequirmentArray = [];
   }
 
 
@@ -70,7 +71,6 @@ export default class extends Controller {
 
 
   toggleRequirement(e) {
-
     // Check if the click event was triggered by the "requirement-question" element or any of its children
     if (e.target.closest(".requirement-question") || e.target.closest(".requirement-question *")) {
       return;
@@ -79,55 +79,69 @@ export default class extends Controller {
     // Find the "quote-build-right" element
     const quoteBuildRight = document.querySelector(".quote-build-right");
 
-
     // Get the selected requirement's content
-    // let selectedRequirementContent = e.target.closest(".requirement").querySelector(".requirement-name p").textContent;
     let selectedRequirementContent = e.target.closest(".requirement");
 
-
-
-    if((selectedRequirementContent.dataset.input === "Quantity") && (window.selectedRequirmentArray.includes(selectedRequirementContent))){
+    if (
+      selectedRequirementContent.dataset.input === "Quantity" &&
+      window.selectedRequirmentArray.includes(selectedRequirementContent)
+    ) {
       console.log("Quantity already there");
       alert("You have already added this requirement. If you require more than one, please let us know by updating the quantity field.");
-    }else{
+    } else {
+      // Hide the current content and clear the container
+      quoteBuildRight.innerHTML = "";
 
-        // Hide the current content and clear the container
-    quoteBuildRight.innerHTML = '';
+      window.selectedRequirmentArray.push(selectedRequirementContent);
+      if (selectedRequirementContent.dataset.input === "Size") {
+        window.multipleRequirmentArray.push(selectedRequirementContent.dataset.name);
+        console.log(multipleRequirmentArray);
+      }
 
-    window.selectedRequirmentArray.push(selectedRequirementContent);
+      window.selectedRequirmentArray.forEach(element => {
+        const numOfElement = multipleRequirmentArray.filter(x => x === element.dataset.name).length;
+        const existingElement = document.querySelector(`#text-wrap-${element.dataset.name}`);
 
-    selectedRequirmentArray.forEach(element => {
-       // Create a new div to display the selected requirement's content
+        if (numOfElement > 1 && existingElement) {
+          const appendInput = document.createElement("p");
+          appendInput.setAttribute("class", "selected-requirement-addition");
+          appendInput.textContent = `${element.dataset.input}:`;
+          existingElement.appendChild(appendInput);
+        } else {
+          // Original else block code to create and append the new selectedRequirementDiv
+          const selectedRequirementDiv = document.createElement("div");
+          selectedRequirementDiv.setAttribute("class", "selected-requirement");
 
-        const selectedRequirementDiv = document.createElement("div");
-        selectedRequirementDiv.setAttribute("class", "selected-requirement");
+          const selectedRequirementDivImage = document.createElement("img");
+          selectedRequirementDivImage.setAttribute("class", "selected-requirement-image");
+          selectedRequirementDivImage.setAttribute("src", `/assets/requirements/${element.dataset.photo}`);
 
-        const selectedRequirementDivImage = document.createElement("img");
-        selectedRequirementDivImage.setAttribute("class", "selected-requirement-image");
-        selectedRequirementDivImage.setAttribute("src", `/assets/requirements/${element.dataset.photo}`);
+          const selectedRequirementDivTextWrap = document.createElement("div");
+          selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
+          selectedRequirementDivTextWrap.setAttribute("id", `text-wrap-${element.dataset.name}`);
 
-        const selectedRequirementDivTextWrap = document.createElement("div");
-        selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
+          const selectedRequirementDivName = document.createElement("p");
+          selectedRequirementDivName.setAttribute("class", "selected-requirement-name");
+          if(numOfElement === 0){
+            selectedRequirementDivName.textContent = `${element.dataset.name}`;
+          }else{
+          selectedRequirementDivName.textContent = `${element.dataset.name} (x ${numOfElement})`;
+          }
 
-        const selectedRequirementDivName = document.createElement("p");
-        selectedRequirementDivName.setAttribute("class", "selected-requirement-name");
-        selectedRequirementDivName.textContent = element.dataset.name;
+          const selectedRequirementDivInput = document.createElement("p");
+          selectedRequirementDivInput.setAttribute("class", "selected-requirement-input");
+          selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
 
-        const selectedRequirementDivInput = document.createElement("p");
-        selectedRequirementDivInput.setAttribute("class", "selected-requirement-input");
-        selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
-
-
-      // Append the selected requirement's content to the "quote-build-right" container
-        quoteBuildRight.appendChild(selectedRequirementDiv);
-        selectedRequirementDiv.appendChild(selectedRequirementDivImage);
-        selectedRequirementDiv.appendChild(selectedRequirementDivTextWrap);
-        selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);
-        selectedRequirementDivTextWrap.appendChild(selectedRequirementDivInput);
-  });
-
-
+          // Append the selected requirement's content to the "quote-build-right" container
+          quoteBuildRight.appendChild(selectedRequirementDiv);
+          selectedRequirementDiv.appendChild(selectedRequirementDivImage);
+          selectedRequirementDiv.appendChild(selectedRequirementDivTextWrap);
+          selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);
+          selectedRequirementDivTextWrap.appendChild(selectedRequirementDivInput);
+        }
+      });
+    }
   }
-}
+
 
 }
