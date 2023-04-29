@@ -7,7 +7,7 @@ const quantityInput = document.createElement("input");
     quantityInput.setAttribute("min", "1");
     quantityInput.setAttribute("max", "10");
     quantityInput.setAttribute("step", "1");
-    quantityInput.setAttribute("class", "user-input-requirements");
+    quantityInput.setAttribute("class", "user-input-requirements quantity-input");
 
     const sizeInputOne = document.createElement("input");
     sizeInputOne.setAttribute("type", "text");
@@ -141,6 +141,9 @@ export default class extends Controller {
           selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
           selectedRequirementDivTextWrap.setAttribute("id", `text-wrap-${element.dataset.name}`);
 
+          const inputWrap = document.createElement("div");
+          inputWrap.setAttribute("class", "input-wrap");
+
           const selectedRequirementDivName = document.createElement("p");
           selectedRequirementDivName.setAttribute("class", "selected-requirement-name");
           if(numOfElement === 0){
@@ -162,14 +165,15 @@ export default class extends Controller {
           selectedRequirementDiv.appendChild(selectedRequirementDivImage);
           selectedRequirementDiv.appendChild(selectedRequirementDivTextWrap);
           selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);
-          selectedRequirementDivTextWrap.appendChild(selectedRequirementDivInput);
+          selectedRequirementDivTextWrap.appendChild(inputWrap);
+          inputWrap.appendChild(selectedRequirementDivInput);
           if(element.dataset.input === "Size"){
-            selectedRequirementDivTextWrap.appendChild(sizeInputOne.cloneNode());
-            selectedRequirementDivTextWrap.appendChild(document.createTextNode(" x "));
-            selectedRequirementDivTextWrap.appendChild(sizeInputTwo.cloneNode());
-            selectedRequirementDivTextWrap.appendChild(document.createTextNode(" (mm)"));
+            inputWrap.appendChild(sizeInputOne.cloneNode());
+            inputWrap.appendChild(document.createTextNode(" x "));
+            inputWrap.appendChild(sizeInputTwo.cloneNode());
+            inputWrap.appendChild(document.createTextNode(" (mm)"));
           }else{
-          selectedRequirementDivTextWrap.appendChild(quantityInput.cloneNode());
+          inputWrap.appendChild(quantityInput.cloneNode());
           }
         }
       });
