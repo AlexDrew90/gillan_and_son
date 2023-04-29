@@ -2,6 +2,23 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
 window.selectedRequirmentArray = [];
 window.multipleRequirmentArray = [];
+const quantityInput = document.createElement("input");
+    quantityInput.setAttribute("type", "number");
+    quantityInput.setAttribute("min", "1");
+    quantityInput.setAttribute("max", "10");
+    quantityInput.setAttribute("step", "1");
+    quantityInput.setAttribute("class", "user-input-requirements");
+
+    const sizeInputOne = document.createElement("input");
+    sizeInputOne.setAttribute("type", "text");
+    sizeInputOne.setAttribute("placeholder", "width");
+    sizeInputOne.setAttribute("class", "user-input-requirements");
+
+    const sizeInputTwo = document.createElement("input");
+    sizeInputTwo.setAttribute("type", "text");
+    sizeInputTwo.setAttribute("placeholder", "height");
+    sizeInputTwo.setAttribute("class", "user-input-requirements");
+
 export default class extends Controller {
   connect() {
     // Slideshow functionality
@@ -107,6 +124,10 @@ export default class extends Controller {
           appendInput.setAttribute("class", "selected-requirement-addition");
           appendInput.textContent = `${element.dataset.input}:`;
           existingElement.appendChild(appendInput);
+          existingElement.appendChild(sizeInputOne.cloneNode());
+          existingElement.appendChild(document.createTextNode(" x "));
+          existingElement.appendChild(sizeInputTwo.cloneNode());
+          existingElement.appendChild(document.createTextNode(" (mm)"));
         } else {
           // Original else block code to create and append the new selectedRequirementDiv
           const selectedRequirementDiv = document.createElement("div");
@@ -130,7 +151,11 @@ export default class extends Controller {
 
           const selectedRequirementDivInput = document.createElement("p");
           selectedRequirementDivInput.setAttribute("class", "selected-requirement-input");
+          if(element.dataset.input === "Size"){
           selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
+          }else{
+            selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
+          }
 
           // Append the selected requirement's content to the "quote-build-right" container
           quoteBuildRight.appendChild(selectedRequirementDiv);
@@ -138,6 +163,14 @@ export default class extends Controller {
           selectedRequirementDiv.appendChild(selectedRequirementDivTextWrap);
           selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);
           selectedRequirementDivTextWrap.appendChild(selectedRequirementDivInput);
+          if(element.dataset.input === "Size"){
+            selectedRequirementDivTextWrap.appendChild(sizeInputOne.cloneNode());
+            selectedRequirementDivTextWrap.appendChild(document.createTextNode(" x "));
+            selectedRequirementDivTextWrap.appendChild(sizeInputTwo.cloneNode());
+            selectedRequirementDivTextWrap.appendChild(document.createTextNode(" (mm)"));
+          }else{
+          selectedRequirementDivTextWrap.appendChild(quantityInput.cloneNode());
+          }
         }
       });
     }
