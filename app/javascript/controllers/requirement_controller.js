@@ -161,7 +161,10 @@ export default class extends Controller {
           }
 
           // Append the selected requirement's content to the "quote-build-right" container
+          const reqCloseBtn = document.createElement("i");
+          reqCloseBtn.setAttribute("class", "fas fa-times reqCloseBtn");
           quoteBuildRight.appendChild(selectedRequirementDiv);
+          selectedRequirementDiv.appendChild(reqCloseBtn);
           selectedRequirementDiv.appendChild(selectedRequirementDivImage);
           selectedRequirementDiv.appendChild(selectedRequirementDivTextWrap);
           selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);

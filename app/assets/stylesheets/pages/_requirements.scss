@@ -114,6 +114,7 @@
   div i{
     color:#14B8B5;
   }
+  cursor: pointer;
 }
 
 .requirement-icons{
@@ -130,8 +131,19 @@
   }
 }
 
+.reqCloseBtn {
+  color: #3c035d;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  cursor: pointer;
+}
+
 .selected-requirement{
   width: 100%;
+  position: relative;
 }
 
 .user-input-requirements{
