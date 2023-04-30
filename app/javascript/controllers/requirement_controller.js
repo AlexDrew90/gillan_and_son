@@ -86,6 +86,30 @@ export default class extends Controller {
     }
   }
 
+  removeSelectedRequirement(e, selectedRequirementContent) {
+    if (e.target.classList.contains("reqCloseBtn")) {
+      const selectedRequirementDiv = e.target.closest(".selected-requirement");
+      const selectedRequirementName = selectedRequirementDiv.querySelector(".selected-requirement-name").textContent;
+
+      // Remove the selected requirement div
+      selectedRequirementDiv.remove();
+
+      // Remove the corresponding requirement from the arrays
+      window.selectedRequirmentArray = window.selectedRequirmentArray.filter((element) => {
+        return element.dataset.name !== selectedRequirementName;
+      });
+
+      window.multipleRequirmentArray = window.multipleRequirmentArray.filter((name) => {
+        return name !== selectedRequirementName;
+      });
+
+      // If the removed requirement is in selectedRequirementContent, remove it
+      if (selectedRequirementContent && selectedRequirementContent.dataset.name === selectedRequirementName) {
+        selectedRequirementContent.remove();
+      }
+    }
+  }
+
 
   toggleRequirement(e) {
     // Check if the click event was triggered by the "requirement-question" element or any of its children
@@ -163,6 +187,8 @@ export default class extends Controller {
           // Append the selected requirement's content to the "quote-build-right" container
           const reqCloseBtn = document.createElement("i");
           reqCloseBtn.setAttribute("class", "fas fa-times reqCloseBtn");
+          // Add the event listener directly to the reqCloseBtn
+          reqCloseBtn.addEventListener("click", (e) => this.removeSelectedRequirement(e, selectedRequirementContent));
           quoteBuildRight.appendChild(selectedRequirementDiv);
           selectedRequirementDiv.appendChild(reqCloseBtn);
           selectedRequirementDiv.appendChild(selectedRequirementDivImage);
