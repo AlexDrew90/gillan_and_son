@@ -107,6 +107,7 @@ export default class extends Controller {
       if (selectedRequirementContent && selectedRequirementContent.dataset.name === selectedRequirementName) {
         selectedRequirementContent.remove();
       }
+
     }
   }
 
