@@ -46,6 +46,7 @@ export default class extends Controller {
    requirementItems.forEach((item) => {
      item.addEventListener("click", this.toggleRequirement.bind(this));
    });
+
   }
 
 
@@ -110,6 +111,34 @@ export default class extends Controller {
 
     }
   }
+
+  submitRequirements(e) {
+    if (e.target.classList.contains("requirement-submit")) {
+      console.log("submit pressed");
+
+      // Get all input elements with the class "user-input-requirements"
+      const inputFields = document.querySelectorAll(".user-input-requirements");
+      let allFieldsCompleted = true;
+
+      // Iterate through the input fields to check if any are empty
+      inputFields.forEach((inputField) => {
+        if (!inputField.value.trim()) {
+          allFieldsCompleted = false;
+        }
+      });
+
+      if (allFieldsCompleted) {
+        // If all fields are completed, console.log their values
+        inputFields.forEach((inputField) => {
+          console.log(`Input field (${inputField.placeholder || inputField.type}): ${inputField.value}`);
+        });
+      } else {
+        // If any field is empty, show an alert
+        alert("Please complete all the fields on your selected requirements.");
+      }
+    }
+  }
+
 
 
   toggleRequirement(e) {
@@ -207,6 +236,11 @@ export default class extends Controller {
           }
         }
       });
+      const submitRequirementsButton = document.createElement("div");
+      submitRequirementsButton.setAttribute("class", "button-primary requirement-submit");
+      submitRequirementsButton.textContent = "Submit";
+      submitRequirementsButton.addEventListener("click", this.submitRequirements.bind(this));
+      quoteBuildRight.appendChild(submitRequirementsButton);
     }
   }
 
