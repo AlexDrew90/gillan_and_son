@@ -92,23 +92,28 @@ export default class extends Controller {
     if (e.target.classList.contains("reqCloseBtn")) {
       const selectedRequirementDiv = e.target.closest(".selected-requirement");
       const selectedRequirementName = selectedRequirementDiv.querySelector(".selected-requirement-name").textContent;
+      console.log(selectedRequirementDiv);
+      console.log(selectedRequirementName);
+      let trimmedName = selectedRequirementName.split(" ")[0];
 
       // Remove the selected requirement div
       selectedRequirementDiv.remove();
 
       // Remove the corresponding requirement from the arrays
       window.selectedRequirmentArray = window.selectedRequirmentArray.filter((element) => {
-        return element.dataset.name !== selectedRequirementName;
+        return element.dataset.name !== trimmedName;
       });
 
       window.multipleRequirmentArray = window.multipleRequirmentArray.filter((name) => {
-        return name !== selectedRequirementName;
+        return name !== trimmedName;
       });
 
-      // If the removed requirement is in selectedRequirementContent, remove it
-      if (selectedRequirementContent && selectedRequirementContent.dataset.name === selectedRequirementName) {
-        selectedRequirementContent.remove();
-      }
+      console.log(multipleRequirmentArray);
+
+      // // If the removed requirement is in selectedRequirementContent, remove it
+      // if (selectedRequirementContent && selectedRequirementContent.dataset.name === selectedRequirementName) {
+      //   selectedRequirementContent.remove();
+      // }
 
     }
   }
