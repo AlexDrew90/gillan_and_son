@@ -8,6 +8,7 @@ const quantityInput = document.createElement("input");
     quantityInput.setAttribute("min", "1");
     quantityInput.setAttribute("max", "10");
     quantityInput.setAttribute("step", "1");
+    quantityInput.setAttribute("value", "1");
     quantityInput.setAttribute("class", "user-input-requirements quantity-input");
 
     const sizeInputOne = document.createElement("input");
@@ -61,7 +62,6 @@ export default class extends Controller {
 
   expand(e) {
     if (e.target.classList.contains("question-image")) {
-      console.log("Hello");
       let imageSource = `/assets/requirements/${e.target.dataset.photoUrl}`;
       const modal = document.createElement("div");
       modal.setAttribute("class", "modal");
@@ -145,6 +145,27 @@ export default class extends Controller {
             console.log(`${field.placeholder || ("quantity")}: ${field.value}`);
           });
       });
+
+      // Creating a modal
+
+      const reviewModalDiv = document.createElement("div");
+      reviewModalDiv.setAttribute("class", "review-modal");
+      const closeBtn = document.createElement("i");
+      closeBtn.setAttribute("class", "fas fa-times revCloseBtn");
+
+      let reviewModal = (reviewModalDiv, closeBtn) => {
+        //add the modal to the main section or the parent element
+        document.querySelector(".requirements-intro-section").append(reviewModalDiv);
+        //adding the close button to modal
+        reviewModalDiv.append(closeBtn);
+        //close function
+        closeBtn.onclick = () => {
+          reviewModalDiv.remove();
+        };
+      };
+
+      reviewModal(reviewModalDiv, closeBtn);
+
       } else {
         // If any field is empty, show an alert
         alert("Please complete all the fields on your selected requirements.");

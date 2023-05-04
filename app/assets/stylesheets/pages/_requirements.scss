@@ -80,10 +80,6 @@
   width: 100px;
 }
 
-// .selected-requirement-name{
-//   padding-left: 40px;
-// }
-
 .selected-requirement-input{
   text-align: left;
 }
@@ -174,6 +170,30 @@
 #requirement-submit{
   width: 50%;
   margin-top: 10px;
+  cursor: pointer;
+}
+
+.review-modal{
+  width: 80%;
+  height: 20%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -1px;
+  z-index: 99999;
+  background-color: #FDF9FA;
+  border: solid #3c035d 2px;
+  border-radius: 15px;
+}
+
+.revCloseBtn {
+  color: #3c035d;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
   cursor: pointer;
 }
 
