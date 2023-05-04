@@ -171,9 +171,10 @@
   text-align: left;
 }
 
-.requirement-submit{
+#requirement-submit{
   width: 50%;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
