@@ -152,12 +152,37 @@ export default class extends Controller {
       reviewModalDiv.setAttribute("class", "review-modal");
       const closeBtn = document.createElement("i");
       closeBtn.setAttribute("class", "fas fa-times revCloseBtn");
+      let reviewHeader = document.createElement("h3");
+      reviewHeader.setAttribute("class", "review-header");
+      reviewHeader.textContent = `Your requirements:`;
+      let reviewContent = document.createElement("p");
+      reviewContent.setAttribute("class", "review-content");
 
       let reviewModal = (reviewModalDiv, closeBtn) => {
         //add the modal to the main section or the parent element
+        const requirementsToSubmit = document.querySelectorAll(".selected-requirement");
         document.querySelector(".requirements-intro-section").append(reviewModalDiv);
         //adding the close button to modal
         reviewModalDiv.append(closeBtn);
+        // add text to modal
+        reviewModalDiv.append(reviewHeader);
+          requirementsToSubmit.forEach((requirement) => {
+            let subHead = document.createElement("p");
+            subHead.setAttribute("class", "review-subheader");
+            subHead.textContent = `${requirement.children[2].children[0].textContent}`;
+            reviewModalDiv.append(subHead);
+            let reqWrap = document.createElement("div");
+            reqWrap.setAttribute("class", "requirement-wrap");
+            reviewModalDiv.append(reqWrap);
+            let reqInput = requirement.querySelectorAll(".user-input-requirements");
+            console.log(reqInput);
+                reqInput.forEach((field) => {
+                  let reviewContent = document.createElement("p");
+                  reviewContent.setAttribute("class", "review-content");
+                  reviewContent.textContent = `${field.placeholder || ("quantity")}: ${field.value}`;
+                  reqWrap.append(reviewContent);
+                });
+          });
         //close function
         closeBtn.onclick = () => {
           reviewModalDiv.remove();
