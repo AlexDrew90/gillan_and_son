@@ -175,7 +175,7 @@
 
 .review-modal{
   width: 80%;
-  height: 20%;
+  padding: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -185,6 +185,34 @@
   background-color: #FDF9FA;
   border: solid #3c035d 2px;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.requirement-wrap{
+  display: flex;
+}
+
+.review-header{
+  padding-bottom: 20px;
+}
+
+.review-subheader{
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.review-content{
+  padding-right: 2%;
 }
 
 .revCloseBtn {
