@@ -92,29 +92,34 @@ export default class extends Controller {
     if (e.target.classList.contains("reqCloseBtn")) {
       const selectedRequirementDiv = e.target.closest(".selected-requirement");
       const selectedRequirementName = selectedRequirementDiv.querySelector(".selected-requirement-name").textContent;
+      console.log(selectedRequirementDiv);
+      console.log(selectedRequirementName);
+      let trimmedName = selectedRequirementName.split(" ")[0];
 
       // Remove the selected requirement div
       selectedRequirementDiv.remove();
 
       // Remove the corresponding requirement from the arrays
       window.selectedRequirmentArray = window.selectedRequirmentArray.filter((element) => {
-        return element.dataset.name !== selectedRequirementName;
+        return element.dataset.name !== trimmedName;
       });
 
       window.multipleRequirmentArray = window.multipleRequirmentArray.filter((name) => {
-        return name !== selectedRequirementName;
+        return name !== trimmedName;
       });
 
-      // If the removed requirement is in selectedRequirementContent, remove it
-      if (selectedRequirementContent && selectedRequirementContent.dataset.name === selectedRequirementName) {
-        selectedRequirementContent.remove();
-      }
+      console.log(multipleRequirmentArray);
+
+      // // If the removed requirement is in selectedRequirementContent, remove it
+      // if (selectedRequirementContent && selectedRequirementContent.dataset.name === selectedRequirementName) {
+      //   selectedRequirementContent.remove();
+      // }
 
     }
   }
 
   submitRequirements(e) {
-    if (e.target.classList.contains("requirement-submit")) {
+    if (e.target.classList.contains("target-submit")) {
 
       // Get all input elements with the class "user-input-requirements"
       const inputFields = document.querySelectorAll(".user-input-requirements");
@@ -129,19 +134,17 @@ export default class extends Controller {
 
       if (allFieldsCompleted) {
 
+      // Console log all required elements to pass through to the modal.
+
       const requirementsToSubmit = document.querySelectorAll(".selected-requirement");
 
       requirementsToSubmit.forEach((requirement) => {
-        console.log(requirement);
+        console.log(requirement.children[2].children[0].textContent);
+        let reqInput = requirement.querySelectorAll(".user-input-requirements");
+          reqInput.forEach((field) => {
+            console.log(`${field.placeholder || ("quantity")}: ${field.value}`);
+          });
       });
-
-
-        // If all fields are completed, console.log their values
-        inputFields.forEach((inputField) => {
-          console.log(inputField.parentElement.parentElement.childNodes[0].textContent);
-          // console.log(`Input field (${inputField.placeholder || inputField.type}): ${inputField.value}`);
-          console.log(`${inputField.placeholder || inputField.type}: ${inputField.value}`);
-        });
       } else {
         // If any field is empty, show an alert
         alert("Please complete all the fields on your selected requirements.");
@@ -193,11 +196,8 @@ export default class extends Controller {
           existingElement.appendChild(sizeInputTwo.cloneNode());
           existingElement.appendChild(document.createTextNode(" (mm)"));
           if(numOfElement > 0){
-            console.log(numOfElement);
             let updateName = existingElement.firstChild;
-            console.log(updateName);
             updateName.textContent = `${selectedRequirementContent.dataset.name} (x ${numOfElement})`;
-
           }
         } else {
           // Original else block code to create and append the new selectedRequirementDiv
@@ -218,10 +218,8 @@ export default class extends Controller {
           const selectedRequirementDivName = document.createElement("p");
           selectedRequirementDivName.setAttribute("class", "selected-requirement-name");
           if(numOfElement === 0){
-            console.log(numOfElement);
             selectedRequirementDivName.textContent = `${selectedRequirementContent.dataset.name}`;
           }else{
-            console.log(numOfElement);
           selectedRequirementDivName.textContent = `${selectedRequirementContent.dataset.name} (x ${numOfElement})`;
           }
 
@@ -259,7 +257,7 @@ export default class extends Controller {
         doesSubmitExist.remove();
         }
         const submitRequirementsButton = document.createElement("div");
-        submitRequirementsButton.setAttribute("class", "button-primary");
+        submitRequirementsButton.setAttribute("class", "button-primary target-submit");
         submitRequirementsButton.setAttribute("id", "requirement-submit");
         submitRequirementsButton.textContent = "Submit";
         submitRequirementsButton.addEventListener("click", this.submitRequirements.bind(this));
