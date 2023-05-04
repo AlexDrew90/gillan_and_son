@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
 window.selectedRequirmentArray = [];
 window.multipleRequirmentArray = [];
+
 const quantityInput = document.createElement("input");
     quantityInput.setAttribute("type", "number");
     quantityInput.setAttribute("min", "1");
@@ -114,7 +115,6 @@ export default class extends Controller {
 
   submitRequirements(e) {
     if (e.target.classList.contains("requirement-submit")) {
-      console.log("submit pressed");
 
       // Get all input elements with the class "user-input-requirements"
       const inputFields = document.querySelectorAll(".user-input-requirements");
@@ -128,9 +128,19 @@ export default class extends Controller {
       });
 
       if (allFieldsCompleted) {
+
+      const requirementsToSubmit = document.querySelectorAll(".selected-requirement");
+
+      requirementsToSubmit.forEach((requirement) => {
+        console.log(requirement);
+      });
+
+
         // If all fields are completed, console.log their values
         inputFields.forEach((inputField) => {
-          console.log(`Input field (${inputField.placeholder || inputField.type}): ${inputField.value}`);
+          console.log(inputField.parentElement.parentElement.childNodes[0].textContent);
+          // console.log(`Input field (${inputField.placeholder || inputField.type}): ${inputField.value}`);
+          console.log(`${inputField.placeholder || inputField.type}: ${inputField.value}`);
         });
       } else {
         // If any field is empty, show an alert
@@ -157,31 +167,38 @@ export default class extends Controller {
       selectedRequirementContent.dataset.input === "Quantity" &&
       window.selectedRequirmentArray.includes(selectedRequirementContent)
     ) {
-      console.log("Quantity already there");
       alert("You have already added this requirement. If you require more than one, please let us know by updating the quantity field.");
     } else {
-      // Hide the current content and clear the container
-      quoteBuildRight.innerHTML = "";
 
+      // Hide the current content and clear the container
+      if(selectedRequirmentArray.length === 0){
+      quoteBuildRight.innerHTML = "";
+      }
       window.selectedRequirmentArray.push(selectedRequirementContent);
       if (selectedRequirementContent.dataset.input === "Size") {
         window.multipleRequirmentArray.push(selectedRequirementContent.dataset.name);
         console.log(multipleRequirmentArray);
       }
 
-      window.selectedRequirmentArray.forEach(element => {
-        const numOfElement = multipleRequirmentArray.filter(x => x === element.dataset.name).length;
-        const existingElement = document.querySelector(`#text-wrap-${element.dataset.name}`);
+        const numOfElement = multipleRequirmentArray.filter(x => x === selectedRequirementContent.dataset.name).length;
+        const existingElement = document.querySelector(`#text-wrap-${selectedRequirementContent.dataset.name}`);
 
         if (numOfElement > 1 && existingElement) {
           const appendInput = document.createElement("p");
           appendInput.setAttribute("class", "selected-requirement-addition");
-          appendInput.textContent = `${element.dataset.input}:`;
+          appendInput.textContent = `${selectedRequirementContent.dataset.input}:`;
           existingElement.appendChild(appendInput);
           existingElement.appendChild(sizeInputOne.cloneNode());
           existingElement.appendChild(document.createTextNode(" x "));
           existingElement.appendChild(sizeInputTwo.cloneNode());
           existingElement.appendChild(document.createTextNode(" (mm)"));
+          if(numOfElement > 0){
+            console.log(numOfElement);
+            let updateName = existingElement.firstChild;
+            console.log(updateName);
+            updateName.textContent = `${selectedRequirementContent.dataset.name} (x ${numOfElement})`;
+
+          }
         } else {
           // Original else block code to create and append the new selectedRequirementDiv
           const selectedRequirementDiv = document.createElement("div");
@@ -189,11 +206,11 @@ export default class extends Controller {
 
           const selectedRequirementDivImage = document.createElement("img");
           selectedRequirementDivImage.setAttribute("class", "selected-requirement-image");
-          selectedRequirementDivImage.setAttribute("src", `/assets/requirements/${element.dataset.photo}`);
+          selectedRequirementDivImage.setAttribute("src", `/assets/requirements/${selectedRequirementContent.dataset.photo}`);
 
           const selectedRequirementDivTextWrap = document.createElement("div");
           selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
-          selectedRequirementDivTextWrap.setAttribute("id", `text-wrap-${element.dataset.name}`);
+          selectedRequirementDivTextWrap.setAttribute("id", `text-wrap-${selectedRequirementContent.dataset.name}`);
 
           const inputWrap = document.createElement("div");
           inputWrap.setAttribute("class", "input-wrap");
@@ -201,17 +218,19 @@ export default class extends Controller {
           const selectedRequirementDivName = document.createElement("p");
           selectedRequirementDivName.setAttribute("class", "selected-requirement-name");
           if(numOfElement === 0){
-            selectedRequirementDivName.textContent = `${element.dataset.name}`;
+            console.log(numOfElement);
+            selectedRequirementDivName.textContent = `${selectedRequirementContent.dataset.name}`;
           }else{
-          selectedRequirementDivName.textContent = `${element.dataset.name} (x ${numOfElement})`;
+            console.log(numOfElement);
+          selectedRequirementDivName.textContent = `${selectedRequirementContent.dataset.name} (x ${numOfElement})`;
           }
 
           const selectedRequirementDivInput = document.createElement("p");
           selectedRequirementDivInput.setAttribute("class", "selected-requirement-input");
-          if(element.dataset.input === "Size"){
-          selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
+          if(selectedRequirementContent.dataset.input === "Size"){
+          selectedRequirementDivInput.textContent = `${selectedRequirementContent.dataset.input}:`;
           }else{
-            selectedRequirementDivInput.textContent = `${element.dataset.input}:`;
+            selectedRequirementDivInput.textContent = `${selectedRequirementContent.dataset.input}:`;
           }
 
           // Append the selected requirement's content to the "quote-build-right" container
@@ -226,7 +245,7 @@ export default class extends Controller {
           selectedRequirementDivTextWrap.appendChild(selectedRequirementDivName);
           selectedRequirementDivTextWrap.appendChild(inputWrap);
           inputWrap.appendChild(selectedRequirementDivInput);
-          if(element.dataset.input === "Size"){
+          if(selectedRequirementContent.dataset.input === "Size"){
             inputWrap.appendChild(sizeInputOne.cloneNode());
             inputWrap.appendChild(document.createTextNode(" x "));
             inputWrap.appendChild(sizeInputTwo.cloneNode());
@@ -235,12 +254,16 @@ export default class extends Controller {
           inputWrap.appendChild(quantityInput.cloneNode());
           }
         }
-      });
-      const submitRequirementsButton = document.createElement("div");
-      submitRequirementsButton.setAttribute("class", "button-primary requirement-submit");
-      submitRequirementsButton.textContent = "Submit";
-      submitRequirementsButton.addEventListener("click", this.submitRequirements.bind(this));
-      quoteBuildRight.appendChild(submitRequirementsButton);
+        let doesSubmitExist = document.getElementById("requirement-submit");
+        if(doesSubmitExist !== null){
+        doesSubmitExist.remove();
+        }
+        const submitRequirementsButton = document.createElement("div");
+        submitRequirementsButton.setAttribute("class", "button-primary");
+        submitRequirementsButton.setAttribute("id", "requirement-submit");
+        submitRequirementsButton.textContent = "Submit";
+        submitRequirementsButton.addEventListener("click", this.submitRequirements.bind(this));
+        quoteBuildRight.appendChild(submitRequirementsButton);
     }
   }
 
