@@ -134,18 +134,6 @@ export default class extends Controller {
 
       if (allFieldsCompleted) {
 
-      // Console log all required elements to pass through to the modal.
-
-      const requirementsToSubmit = document.querySelectorAll(".selected-requirement");
-
-      requirementsToSubmit.forEach((requirement) => {
-        console.log(requirement.children[2].children[0].textContent);
-        let reqInput = requirement.querySelectorAll(".user-input-requirements");
-          reqInput.forEach((field) => {
-            console.log(`${field.placeholder || ("quantity")}: ${field.value}`);
-          });
-      });
-
       // Creating a modal
 
       const reviewModalDiv = document.createElement("div");
@@ -175,12 +163,36 @@ export default class extends Controller {
             reqWrap.setAttribute("class", "requirement-wrap");
             reviewModalDiv.append(reqWrap);
             let reqInput = requirement.querySelectorAll(".user-input-requirements");
-            console.log(reqInput);
+            let countInput = 0;
+            let everyOtherCount = 0;
                 reqInput.forEach((field) => {
+                  countInput = countInput + 1;
                   let reviewContent = document.createElement("p");
                   reviewContent.setAttribute("class", "review-content");
-                  reviewContent.textContent = `${field.placeholder || ("quantity")}: ${field.value}`;
-                  reqWrap.append(reviewContent);
+                  reviewContent.textContent = `${field.value}`;
+                  if(countInput % 2 ==0){
+                    let times = document.createElement("p");
+                    times.textContent = `x`;
+                    reqWrap.append(times);
+                    reqWrap.append(reviewContent);
+                    let separate = document.createElement("p");
+                    separate.textContent = `mm\u00A0\u00A0\u00A0`;
+                    reqWrap.append(separate);
+                  }else{
+                    if(requirement.children[2].children[1].children[0].textContent === "Quantity:"){
+                      console.log("match for quantity");
+                      let quantity = document.createElement("p");
+                      quantity.textContent = `Quantity:\u00A0`;
+                      reqWrap.append(quantity);
+                      reqWrap.append(reviewContent);
+                    }else{
+                    everyOtherCount = everyOtherCount +1
+                    let everyOtherNumber = document.createElement("p");
+                    everyOtherNumber.textContent = `${everyOtherCount})\u00A0`;
+                    reqWrap.append(everyOtherNumber);
+                    reqWrap.append(reviewContent);
+                    }
+                  }
                 });
           });
         //close function
