@@ -203,12 +203,19 @@
 
 .review-header{
   padding-bottom: 20px;
+  font-weight: bold;
 }
 
 .review-subheader{
   font-weight: bold;
   font-size: 2rem;
   padding: 20px;
+}
+
+.contact-info-subheader{
+  font-size: 1.75rem;
+  padding: 30px 20px 20px 20px;
+  font-weight: bold;
 }
 
 .review-content{
@@ -223,6 +230,16 @@
   right: 0;
   margin: 10px;
   cursor: pointer;
+}
+
+.request-quote-button{
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.user-info-input{
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 767px) {

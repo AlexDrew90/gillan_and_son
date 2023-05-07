@@ -6,11 +6,10 @@ export default class extends Controller {
   static targets = [ "granite", "quartz", "ceramic" ]
 
   connect() {
-    console.log("Is materials toggle connected?");
+
   }
 
   granite() {
-    console.log("Granite");
     let graniteSection = this.element.querySelector(".active-materials-section");
     let quartzSection = this.element.querySelector(".materials-quartz-section");
     let ceramicSection = this.element.querySelector(".materials-ceramic-section");
@@ -29,7 +28,6 @@ export default class extends Controller {
   }
 
   quartz() {
-    console.log("Quartz");
     let graniteSection = this.element.querySelector(".active-materials-section");
     let quartzSection = this.element.querySelector(".materials-quartz-section");
     let ceramicSection = this.element.querySelector(".materials-ceramic-section");
@@ -48,7 +46,6 @@ export default class extends Controller {
   }
 
   ceramic() {
-    console.log("Ceramic");
     let graniteSection = this.element.querySelector(".active-materials-section");
     let quartzSection = this.element.querySelector(".materials-quartz-section");
     let ceramicSection = this.element.querySelector(".materials-ceramic-section");
