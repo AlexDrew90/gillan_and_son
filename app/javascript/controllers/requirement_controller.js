@@ -160,6 +160,8 @@ export default class extends Controller {
       reviewHeader.textContent = `Your requirements:`;
       let reviewContent = document.createElement("p");
       reviewContent.setAttribute("class", "review-content");
+      let modalBackground = document.createElement("div");
+      modalBackground.setAttribute("id", "bg");
 
       let reviewModal = (reviewModalDiv, closeBtn) => {
         //add the modal to the main section or the parent element
@@ -195,7 +197,6 @@ export default class extends Controller {
                     reqWrap.append(separate);
                   }else{
                     if(requirement.children[2].children[1].children[0].textContent === "Quantity:"){
-                      console.log("match for quantity");
                       let quantity = document.createElement("p");
                       quantity.textContent = `Quantity:\u00A0`;
                       reqWrap.append(quantity);
@@ -230,10 +231,12 @@ export default class extends Controller {
         //close function
         closeBtn.onclick = () => {
           reviewModalDiv.remove();
+          modalBackground.remove();
         };
       };
 
       reviewModal(reviewModalDiv, closeBtn);
+      document.querySelector(".requirements-intro-section").append(modalBackground);
 
       } else {
         // If any field is empty, show an alert
@@ -243,7 +246,40 @@ export default class extends Controller {
   }
 
   requestQuote(e) {
-    console.log("Submit");
+    let parentContainer = e.target.parentElement
+    // Get all input elements with the class "user-input-requirements"
+    const inputFields = parentContainer.querySelectorAll(".user-input-requirements");
+    let allFieldsCompleted = true;
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "fas fa-times revCloseBtn");
+
+    // Iterate through the input fields to check if any are empty
+    inputFields.forEach((inputField) => {
+      if (!inputField.value.trim()) {
+        allFieldsCompleted = false;
+      }
+    });
+
+    if (allFieldsCompleted) {
+      console.log(parentContainer);
+      parentContainer.innerHTML = "";
+      parentContainer.appendChild(closeBtn);
+      let enveleopeAnimation = document.createElement("i");
+      enveleopeAnimation.setAttribute("class", "fa-solid fa-envelope-circle-check fa-bounce fa-3x contact-icons");
+      parentContainer.appendChild(enveleopeAnimation);
+      let successContent = document.createElement("p");
+      successContent.setAttribute("class", "success-content");
+      successContent.textContent = `Your request for a quote has been sent. We will get back to you as soon as possible.`
+      parentContainer.appendChild(successContent);
+
+    }else{alert("Please provide your contact details.");}
+    //close function
+    closeBtn.onclick = () => {
+      parentContainer.remove();
+      let modalBackground = document.getElementById("bg");
+      console.log(modalBackground);
+      modalBackground.remove();
+    };
   }
 
   toggleRequirement(e) {
