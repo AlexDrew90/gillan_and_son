@@ -43,7 +43,6 @@ export default class extends Controller {
       }
       newImage.setAttribute("src", prevSource);
       imageSource = prevSource;
-      console.log(indexOfCurrentImage);
       };
 
     rightArrow.onclick = () => {
@@ -55,7 +54,6 @@ export default class extends Controller {
         }
       newImage.setAttribute("src", nextSource)
       imageSource = nextSource
-      console.log(indexOfCurrentImage);
       };
 
 
@@ -68,14 +66,5 @@ export default class extends Controller {
 
   imgModal(imageSource);
   }
-
-  // rightImageButton() {
-  //   console.log(imageSrcArray);
-  //   let indexOfCurrentImage = imageSrcArray.indexOf(imageSource);
-  //   console.log(indexOfCurrentImage);
-  //   let nextSource = imageSrcArray[(indexOfCurrentImage+1)]
-  //   newImage.setAttribute("src", nextSource)
-  //   indexOfCurrentImage = (indexOfCurrentImage + 1)
-  // }
 
 }

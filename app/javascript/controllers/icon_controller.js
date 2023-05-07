@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = [ "hourglass-top", "hourglass-bottom", "main-stamp", "award-number" ]
 
   connect() {
-    console.log("icons");
+
   }
   iconAnimateHourglassTop() {
     let topPart = document.getElementById("top-hourglass");

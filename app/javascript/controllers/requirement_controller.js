@@ -13,13 +13,28 @@ const quantityInput = document.createElement("input");
 
     const sizeInputOne = document.createElement("input");
     sizeInputOne.setAttribute("type", "text");
-    sizeInputOne.setAttribute("placeholder", "width");
+    sizeInputOne.setAttribute("placeholder", "length");
     sizeInputOne.setAttribute("class", "user-input-requirements");
 
     const sizeInputTwo = document.createElement("input");
     sizeInputTwo.setAttribute("type", "text");
-    sizeInputTwo.setAttribute("placeholder", "height");
+    sizeInputTwo.setAttribute("placeholder", "width");
     sizeInputTwo.setAttribute("class", "user-input-requirements");
+
+    const nameInput = document.createElement("input");
+    nameInput.setAttribute("type", "text");
+    nameInput.setAttribute("placeholder", "name");
+    nameInput.setAttribute("class", "user-input-requirements user-info-input");
+
+    const emailInput = document.createElement("input");
+    emailInput.setAttribute("type", "text");
+    emailInput.setAttribute("placeholder", "email address");
+    emailInput.setAttribute("class", "user-input-requirements user-info-input");
+
+    const phoneInput = document.createElement("input");
+    phoneInput.setAttribute("type", "text");
+    phoneInput.setAttribute("placeholder", "phone number");
+    phoneInput.setAttribute("class", "user-input-requirements user-info-input");
 
 export default class extends Controller {
   connect() {
@@ -195,6 +210,23 @@ export default class extends Controller {
                   }
                 });
           });
+          let customerInfoHeader = document.createElement("h3");
+          customerInfoHeader.setAttribute("class", "contact-info-subheader");
+          customerInfoHeader.textContent = `Your contact information:`;
+          let customerInfoPara = document.createElement("p");
+          customerInfoPara.setAttribute("class", "customer-info-request");
+          customerInfoPara.textContent = `Please provide your contact information, so that we can get back to you with a quote. We won't use your information for any other purpose.`;
+          reviewModalDiv.appendChild(customerInfoHeader);
+          reviewModalDiv.appendChild(customerInfoPara);
+          reviewModalDiv.appendChild(nameInput);
+          reviewModalDiv.appendChild(emailInput);
+          reviewModalDiv.appendChild(phoneInput);
+          const requestQuoteButton = document.createElement("div");
+          requestQuoteButton.setAttribute("class", "button-primary request-quote-button");
+          requestQuoteButton.setAttribute("id", "request-quote");
+          requestQuoteButton.textContent = "Request quote";
+          requestQuoteButton.addEventListener("click", this.requestQuote.bind(this));
+          reviewModalDiv.appendChild(requestQuoteButton);
         //close function
         closeBtn.onclick = () => {
           reviewModalDiv.remove();
@@ -210,7 +242,9 @@ export default class extends Controller {
     }
   }
 
-
+  requestQuote(e) {
+    console.log("Submit");
+  }
 
   toggleRequirement(e) {
     // Check if the click event was triggered by the "requirement-question" element or any of its children
