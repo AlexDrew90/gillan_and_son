@@ -261,7 +261,11 @@ export default class extends Controller {
     });
 
     if (allFieldsCompleted) {
-      console.log(parentContainer);
+      inputFields.forEach((inputField) => {
+      console.log(inputField.placeholder);
+      console.log(inputField.value);
+    })
+
       parentContainer.innerHTML = "";
       parentContainer.appendChild(closeBtn);
       let enveleopeAnimation = document.createElement("i");
