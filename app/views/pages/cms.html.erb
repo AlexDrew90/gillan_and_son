@@ -1,0 +1,11 @@
+<div class="content-manage-wrapper">
+  <h1>Hi Colin, Welcome to the content management page for the website</h1>
+  <p>This section allows you to update the website with whatever content you wish to add. You can use it add new gallery items, reviews, brands, materials, staff members and requirements for the quote builder. It might be worth letting me know if you plan to update the latter as it might break it.</p>
+  <h3>Gallery items</h3>
+  <p>Add new gallery item</p>
+  <% @gallery_items.each do |item| %>
+    <%= image_tag("gallery/#{item.photos}", class:"gallery-tile") %>
+    <br>
+  <% end %>
+
+</div>

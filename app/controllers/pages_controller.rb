@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def cms
+    @gallery_items = GalleryItem.all
+  end
 end
