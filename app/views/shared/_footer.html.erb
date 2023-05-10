@@ -13,6 +13,8 @@
       <div class="footer-staff-login">
         <p>Our privacy policy</p>
          <% if user_signed_in? %>
+         <%= link_to "Admin", cms_path %>
+         <br>
          <%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
          <% else %>
          <%= link_to "Staff login", new_user_session_path %>

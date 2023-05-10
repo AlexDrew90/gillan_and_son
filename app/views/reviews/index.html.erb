@@ -1,0 +1,16 @@
+<div class="review-wrapper-section">
+  <div class="review-intro-section">
+      <h1 class="home-header">Our testimonials</h1>
+  </div>
+  <div class="review-body">
+    <% @reviews.each do |review| %>
+    <div class="review-item">
+    <p><%= review.description %></p>
+    <p>- <%= review.name %></p>
+    </div>
+    <% end %>
+  </div>
+  <div class="gallery-end-section">
+    <p>Why not <%= link_to "get in touch", contact_path %> and arrange a visit to our showroom for a more hands-on experience of what we can deliver?</p>
+  </div>
+</div>
