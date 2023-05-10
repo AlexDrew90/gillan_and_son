@@ -1,15 +1,54 @@
 <div class="content-manage-wrapper">
   <h1>Hi Colin, Welcome to the content management page for the website</h1>
   <p>This section allows you to update the website with whatever content you wish to add. You can use it add new gallery items, reviews, brands, materials, staff members and requirements for the quote builder. It might be worth letting me know if you plan to update the latter as it might break it.</p>
+
+  <div class="gallery-cms">
   <h3>Gallery items</h3>
   <%= link_to "ADD NEW GALLERY ITEM", new_gallery_item_path %>
   <br>
-  <p>Or selecte an existing gallery item that you wish to amend or delete:</p>
+  <p>Or select an existing gallery item that you wish to amend or delete:</p>
   <br>
-  <% @gallery_items.each do |item| %>
-    <%= image_tag("gallery/#{item.photos}", class:"gallery-tile") %>
-    <%= link_to "Update or delete", gallery_item_path(item) %>
+    <% @gallery_items.each do |item| %>
+      <div class="review-item">
+        <%= image_tag("gallery/#{item.photos}", class:"gallery-tile") %>
+        <%= link_to "Update or delete", gallery_item_path(item) %>
+      </div>
+      <br>
+    <% end %>
+  </div>
+
+  <div class="review-cms">
+  <h3>Testimonials</h3>
+  <%= link_to "ADD NEW TESTIMONIAL", new_review_path %>
+  <br>
+  <p>Or select an existing testimonial that you wish to amend or delete:</p>
+  <br>
+    <% @reviews.each do |review| %>
+    <div class="review-item">
+    <p><%= review.description %></p>
+    <p>- <%= review.name %></p>
+    <%= link_to "Update or delete", review_path(review) %>
+    </div>
     <br>
-  <% end %>
+    <br>
+    <% end %>
+  </div>
+
+   <div class="materials-cms">
+  <h3>Materials</h3>
+  <%= link_to "ADD NEW MATERIAL", new_material_path %>
+  <br>
+  <p>Or select an existing testimonial that you wish to amend or delete:</p>
+  <br>
+    <% @materials.each do |material| %>
+    <div class="review-item">
+    <%= image_tag("materials/#{material.photo}") %>
+    <p>- <%= material.name %></p>
+    <%= link_to "Update or delete", material_path(material) %>
+    </div>
+    <br>
+    <br>
+    <% end %>
+  </div>
 
 </div>

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :requirements, only: [:index, :show, :new, :create, :destroy]
 
+  resources :brands, only: [:index, :show, :new, :create, :destroy]
+
   # resources :materials, only: [:index, :show, :new, :create, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

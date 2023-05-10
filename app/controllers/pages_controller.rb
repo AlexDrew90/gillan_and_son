@@ -10,5 +10,7 @@ class PagesController < ApplicationController
 
   def cms
     @gallery_items = GalleryItem.all
+    @reviews = Review.all
+    @materials = Material.all
   end
 end
