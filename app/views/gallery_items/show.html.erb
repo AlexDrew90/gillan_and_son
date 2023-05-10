@@ -1,6 +1,7 @@
 <div class="content-manage-wrapper">
-  <h1>You can edit or this gallery item:</h1>
+  <h1>You can edit or delete this gallery item:</h1>
   <br>
   <%= image_tag("gallery/#{@gallery_item.photos}", class:"gallery-tile") %>
   <br>
+<%= link_to "Back to admin homepage", cms_path %>
 </div>
