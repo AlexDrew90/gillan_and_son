@@ -1,0 +1,39 @@
+.review-intro-section{
+  width: 90vw;
+  margin: 2vh 5vw 0vh 5vw;
+  padding: 10vh 0 1vh 0;
+  p{
+    padding: 2vh 0 2vh 0;
+    font-size: 2rem;
+  }
+}
+
+.review-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-item{
+  background-color: white;
+  width: 50%;
+  border-radius: 15px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  margin: 10px;
+}
+
+@media (max-width: 767px) {
+
+  .review-item{
+    width: 90%;
+    font-size: 1.75rem;
+    padding: 5%;
+  }
+
+}
