@@ -8,7 +8,7 @@
       <li class="cms-header-testimonials" data-action="click->cms-toggle#testimonials">Testimonials</li>
       <li class="cms-header-brands" data-action="click->cms-toggle#brands">Brands</li>
       <li class="cms-header-materials" data-action="click->cms-toggle#materials">Materials</li>
-      <li class="cms-header-staff" data-action="click->cms-toggle#staff">Staff Members</li>
+      <li class="cms-header-staff" data-action="click->cms-toggle#staff">Staff members</li>
       <li class="cms-header-requirements" data-action="click->cms-toggle#requirements">Requirements</li>
     </ul>
   </div>
@@ -47,6 +47,15 @@
 
   <div class="brands-cms hidden-cms" data-cms-toggle-target="brands">
    <h3>Brands</h3>
+   <p>I have not enabled the functionality to remove a brand entirely as this will remove all of the materials that belong to it. You can still delete all the indivitual materials though.</p>
+    <% @brands.each do |brand| %>
+    <div class="review-item">
+    <%= image_tag("brands/#{brand.logo}") %>
+    <p><%= brand.name %></p>
+    </div>
+    <br>
+    <br>
+    <% end %>
   </div>
 
    <div class="materials-cms hidden-cms" data-cms-toggle-target="materials">

@@ -12,5 +12,6 @@ class PagesController < ApplicationController
     @gallery_items = GalleryItem.all
     @reviews = Review.all
     @materials = Material.all
+    @brands = Brand.all
   end
 end

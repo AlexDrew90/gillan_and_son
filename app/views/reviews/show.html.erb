@@ -5,6 +5,12 @@
     <p><%= @review.description %></p>
     <p>- <%= @review.name %></p>
     </div>
+   <br>
+    <%= link_to "UPDATE TESTIMONIAL", edit_review_path(@review) %>
+   <br>
+   <br>
+   <%= link_to "DELETE THIS TESTIMONIAL", review_path(@review), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <br>
   <br>
   <%= link_to "Back to admin homepage", cms_path %>
 </div>
