@@ -7,6 +7,9 @@ import { application } from "./application"
 import CarouselController from "./carousel_controller"
 application.register("carousel", CarouselController)
 
+import CmsToggleController from "./cms_toggle_controller"
+application.register("cms-toggle", CmsToggleController)
+
 import GalleryController from "./gallery_controller"
 application.register("gallery", GalleryController)
 

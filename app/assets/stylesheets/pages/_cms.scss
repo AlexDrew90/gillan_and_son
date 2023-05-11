@@ -7,3 +7,27 @@
     font-size: 1.5rem;
   }
 }
+
+.hidden-cms{
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.cms-section-tab-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  li{
+    list-style: none;
+    padding: 2vh 20px 3vh 20px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
+.selected-cms-header{
+  font-weight: bold;
+  color: #3c035d;
+}

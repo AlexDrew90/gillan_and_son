@@ -1,8 +1,19 @@
-<div class="content-manage-wrapper">
+<div class="content-manage-wrapper" data-controller="cms-toggle">
   <h1>Hi Colin, Welcome to the content management page for the website</h1>
   <p>This section allows you to update the website with whatever content you wish to add. You can use it add new gallery items, reviews, brands, materials, staff members and requirements for the quote builder. It might be worth letting me know if you plan to update the latter as it might break it.</p>
 
-  <div class="gallery-cms">
+  <div class="cms-section-tab">
+    <ul class="cms-section-tab-list">
+      <li class="cms-header-gallery-items selected-cms-header" data-action="click->cms-toggle#gallery">Gallery items</li>
+      <li class="cms-header-testimonials" data-action="click->cms-toggle#testimonials">Testimonials</li>
+      <li class="cms-header-brands" data-action="click->cms-toggle#brands">Brands</li>
+      <li class="cms-header-materials" data-action="click->cms-toggle#materials">Materials</li>
+      <li class="cms-header-staff" data-action="click->cms-toggle#staff">Staff Members</li>
+      <li class="cms-header-requirements" data-action="click->cms-toggle#requirements">Requirements</li>
+    </ul>
+  </div>
+
+  <div class="gallery-cms active-materials-section" data-cms-toggle-target="gallery">
   <h3>Gallery items</h3>
   <%= link_to "ADD NEW GALLERY ITEM", new_gallery_item_path %>
   <br>
@@ -17,7 +28,7 @@
     <% end %>
   </div>
 
-  <div class="review-cms">
+  <div class="review-cms hidden-cms" data-cms-toggle-target="testimonials">
   <h3>Testimonials</h3>
   <%= link_to "ADD NEW TESTIMONIAL", new_review_path %>
   <br>
@@ -34,7 +45,11 @@
     <% end %>
   </div>
 
-   <div class="materials-cms">
+  <div class="brands-cms hidden-cms" data-cms-toggle-target="brands">
+   <h3>Brands</h3>
+  </div>
+
+   <div class="materials-cms hidden-cms" data-cms-toggle-target="materials">
   <h3>Materials</h3>
   <%= link_to "ADD NEW MATERIAL", new_material_path %>
   <br>
@@ -49,6 +64,14 @@
     <br>
     <br>
     <% end %>
+  </div>
+
+   <div class="staff-cms hidden-cms" data-cms-toggle-target="staff">
+   <h3>Staff members</h3>
+  </div>
+
+   <div class="requirements-cms hidden-cms" data-cms-toggle-target="requirements">
+   <h3>Requirements</h3>
   </div>
 
 </div>
