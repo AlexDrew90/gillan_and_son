@@ -1,7 +1,16 @@
 <div class="content-manage-wrapper">
   <h1>You can edit or delete this gallery item:</h1>
   <br>
+  <div class="review-item">
   <%= image_tag("gallery/#{@gallery_item.photos}", class:"gallery-tile") %>
+  </div>
+  <br>
+    <%= link_to "UPDATE GALLERY ITEM", edit_gallery_item_path(@gallery_item) %>
+   <br>
+   <br>
+   <%= link_to "DELETE THIS GALLERY ITEM", gallery_item_path(@gallery_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <br>
+  <br>
   <br>
 <%= link_to "Back to admin homepage", cms_path %>
 </div>

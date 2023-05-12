@@ -1,5 +1,15 @@
 <div class="content-manage-wrapper">
   <h1>Add a new gallery item:</h1>
+  <%= form_with model: @gallery_item do |f| %>
+  <%= f.label :description %>
+  <br>
+  <%= f.text_field :description %>
+  <br>
+  <%# <%= f.input :photos, as: :file %> %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
   <br>
   <%= link_to "Back to admin homepage", cms_path %>
 </div>
