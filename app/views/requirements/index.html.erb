@@ -43,7 +43,7 @@
   <p>Please select some requirments</p>
     <div class="requirement-demo-slideshow-container">
       <% @requirements.each do |requirement|  %>
-        <%= image_tag("requirements/#{requirement.photo}", class:"requirement-demo-slideshow hide-slide-image") %>
+        <%= image_tag("#{requirement.photo}", class:"requirement-demo-slideshow hide-slide-image") %>
       <% end %>
     </div>
   </div>
