@@ -77,7 +77,7 @@ export default class extends Controller {
 
   expand(e) {
     if (e.target.classList.contains("question-image")) {
-      let imageSource = `/assets/requirements/${e.target.dataset.photoUrl}`;
+      let imageSource = `/assets/${e.target.dataset.photoUrl}`;
       const modal = document.createElement("div");
       modal.setAttribute("class", "modal");
       const closeBtn = document.createElement("i");
@@ -338,7 +338,7 @@ export default class extends Controller {
 
           const selectedRequirementDivImage = document.createElement("img");
           selectedRequirementDivImage.setAttribute("class", "selected-requirement-image");
-          selectedRequirementDivImage.setAttribute("src", `/assets/requirements/${selectedRequirementContent.dataset.photo}`);
+          selectedRequirementDivImage.setAttribute("src", `/assets/${selectedRequirementContent.dataset.photo}`);
 
           const selectedRequirementDivTextWrap = document.createElement("div");
           selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
