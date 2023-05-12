@@ -37,6 +37,6 @@ class GalleryItemsController < ApplicationController
   private
 
   def gallery_item_params
-    params.require(:gallery_item).permit(:photos)
+    params.require(:gallery_item).permit(:photo)
   end
 end

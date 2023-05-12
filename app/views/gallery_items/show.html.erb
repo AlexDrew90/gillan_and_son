@@ -2,7 +2,8 @@
   <h1>You can edit or delete this gallery item:</h1>
   <br>
   <div class="review-item">
-  <%= image_tag("gallery/#{@gallery_item.photos}", class:"gallery-tile") %>
+  <%= image_tag url_for(@gallery_item.photo), class:"gallery-tile", alt: "Gallery item photo" if @gallery_item.photo.attached? %>
+
   </div>
   <br>
     <%= link_to "UPDATE GALLERY ITEM", edit_gallery_item_path(@gallery_item) %>

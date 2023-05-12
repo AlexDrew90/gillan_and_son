@@ -21,7 +21,7 @@
   <br>
     <% @gallery_items.each do |item| %>
       <div class="review-item">
-        <%= image_tag("gallery/#{item.photos}", class:"gallery-tile") %>
+        <%= image_tag url_for(item.photo), class:"gallery-tile", alt: "Gallery item photo" if item.photo.attached? %>
         <%= link_to "Update or delete", gallery_item_path(item) %>
       </div>
       <br>
@@ -50,7 +50,7 @@
    <p>I have not enabled the functionality to remove a brand entirely as this will remove all of the materials that belong to it. You can still delete all the indivitual materials though.</p>
     <% @brands.each do |brand| %>
     <div class="review-item">
-    <%= image_tag("brands/#{brand.logo}") %>
+    <%= image_tag("#{brand.logo}") %>
     <p><%= brand.name %></p>
     </div>
     <br>
@@ -66,7 +66,7 @@
   <br>
     <% @materials.each do |material| %>
     <div class="review-item">
-    <%= image_tag("materials/#{material.photo}") %>
+    <%= image_tag("#{material.photo}") %>
     <p>- <%= material.name %></p>
     <%= link_to "Update or delete", material_path(material) %>
     </div>
