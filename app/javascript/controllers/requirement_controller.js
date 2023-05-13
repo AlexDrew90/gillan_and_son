@@ -75,33 +75,33 @@ export default class extends Controller {
   }
 
 
-  // expand(e) {
-  //   if (e.target.classList.contains("question-image")) {
-  //     let imageSource = e.target.dataset.photoUrl;
-  //     const modal = document.createElement("div");
-  //     modal.setAttribute("class", "modal");
-  //     const closeBtn = document.createElement("i");
-  //     closeBtn.setAttribute("class", "fas fa-times closeBtn");
+  expand(e) {
+    if (e.target.classList.contains("question-image")) {
+      let imageSource = e.target.dataset.url;
+      const modal = document.createElement("div");
+      modal.setAttribute("class", "modal");
+      const closeBtn = document.createElement("i");
+      closeBtn.setAttribute("class", "fas fa-times closeBtn");
 
-  //     let imgModal = (imageSource, modal, closeBtn) => {
-  //       //add the modal to the main section or the parent element
-  //       document.querySelector(".requirements-intro-section").append(modal);
-  //       //adding image to modal
-  //       const newImage = document.createElement("img");
-  //       newImage.setAttribute("src", imageSource);
-  //       modal.append(newImage);
-  //       //adding the close button to modal
-  //       modal.append(newImage, closeBtn);
+      let imgModal = (imageSource, modal, closeBtn) => {
+        //add the modal to the main section or the parent element
+        document.querySelector(".requirements-intro-section").append(modal);
+        //adding image to modal
+        const newImage = document.createElement("img");
+        newImage.setAttribute("src", imageSource);
+        modal.append(newImage);
+        //adding the close button to modal
+        modal.append(newImage, closeBtn);
 
-  //       //close function
-  //       closeBtn.onclick = () => {
-  //         modal.remove();
-  //       };
-  //     };
+        //close function
+        closeBtn.onclick = () => {
+          modal.remove();
+        };
+      };
 
-  //     imgModal(imageSource, modal, closeBtn);
-  //   }
-  // }
+      imgModal(imageSource, modal, closeBtn);
+    }
+  }
 
   removeSelectedRequirement(e, selectedRequirementContent) {
     if (e.target.classList.contains("reqCloseBtn")) {
@@ -338,7 +338,8 @@ export default class extends Controller {
 
           const selectedRequirementDivImage = document.createElement("img");
           selectedRequirementDivImage.setAttribute("class", "selected-requirement-image");
-          selectedRequirementDivImage.setAttribute("src", `${selectedRequirementContent.dataset.photo}`);
+          selectedRequirementDivImage.setAttribute("src", `${selectedRequirementContent.dataset.url}`);
+          console.log(selectedRequirementContent);
 
           const selectedRequirementDivTextWrap = document.createElement("div");
           selectedRequirementDivTextWrap.setAttribute("class", "selected-requirement-text-wrap");
