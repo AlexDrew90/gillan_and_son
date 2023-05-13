@@ -1,0 +1,13 @@
+<div class="content-manage-wrapper">
+  <h1>You can edit or delete this material:</h1>
+  <br>
+  <div class="review-item">
+  <%= image_tag url_for(@material.photo), class: "materials-tile", alt: "Material tile photo" if @material.photo.attached? rescue nil %>
+  </div>
+   <br>
+   <%= link_to "DELETE THIS MATERIAL ITEM", material_path(@material), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <br>
+  <br>
+  <br>
+<%= link_to "Back to admin homepage", cms_path %>
+</div>

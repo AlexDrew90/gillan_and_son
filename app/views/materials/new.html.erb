@@ -1,0 +1,12 @@
+<div class="content-manage-wrapper">
+  <h1>Add a new material:</h1>
+  <%= simple_form_for @material, html: { enctype: 'multipart/form-data' } do |f| %>
+  <%= f.input :photo, as: :file, required: true %>
+  <%= f.input :name, required: true %>
+  <%= f.association :brand, collection: Brand.all, prompt: 'Select a Brand', required: true %>
+  <%= f.input :material_type, collection: Material::MATERIAL_TYPES, prompt: 'Select a Material Type', required: true %>
+  <%= f.button :submit %>
+<% end %>
+  <br>
+  <%= link_to "Back to admin homepage", cms_path %>
+</div>
