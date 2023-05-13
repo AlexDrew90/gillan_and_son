@@ -15,7 +15,7 @@ class GalleryItemsController < ApplicationController
   def create
     @gallery_item = GalleryItem.new(gallery_item_params)
     @gallery_item.save
-    redirect_to gallery_item_path(@gallery_item)
+    redirect_to cms_path
   end
 
   def edit
@@ -31,7 +31,7 @@ class GalleryItemsController < ApplicationController
   def destroy
     @gallery_item = GalleryItem.find(params[:id])
     @gallery_item.destroy
-    redirect_to gallery_items_path, status: :see_other
+    redirect_to cms_path, status: :see_other
   end
 
   private
