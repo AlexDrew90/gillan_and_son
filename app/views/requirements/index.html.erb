@@ -30,9 +30,9 @@
 <div class="quote-build-wrapper">
   <div class="quote-build-left">
     <% @requirements.each do |requirement|  %>
-      <div class="requirement" data-name="<%= requirement.name.gsub(' ', '-') %>" data-input="<%= requirement.input %>" data-url="<%= image_tag requirement.photo %>" data-controller="requirement" data-action="click->requirement#toggleRequirement">
+      <div class="requirement" data-name="<%= requirement.name.gsub(' ', '-') %>" data-input="<%= requirement.input %>" data-url="<%= asset_path requirement.photo %>" data-controller="requirement" data-action="click->requirement#toggleRequirement">
         <div class="requirement-question">
-          <i data-url="<%= image_tag requirement.photo %>" class="fa-solid fa-circle-question requirement-icons question-image fa-3x"></i>
+          <i data-url="<%= asset_path requirement.photo %>" class="fa-solid fa-circle-question requirement-icons question-image fa-3x"></i>
         </div>
         <div class="requirement-name"><p><%= requirement.name %></p></div>
         <div class="requirement-plus"><i class="fa-solid fa-circle-plus requirement-icons fa-3x"></i></div>
