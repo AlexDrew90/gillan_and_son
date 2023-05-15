@@ -7,22 +7,20 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Review.destroy_all
-Material.destroy_all
 Brand.destroy_all
-GalleryItem.destroy_all
 Requirement.destroy_all
 
-Requirement.create!(name: "Worktop", photo: "worktop_requirement_demo.jpeg", input: "Size")
-Requirement.create!(name: "Island", photo: "island_requirement_demo.jpeg", input: "Size")
-Requirement.create!(name: "Waterfall Edge", photo: "waterfall_edge_requirement_demo.jpeg", input: "Quantity")
-Requirement.create!(name: "Unpolished cut-out", photo: "unpolished_cut-out_requirement_demo.jpeg", input: "Quantity")
-Requirement.create!(name: "Tap cut-out", photo: "tap_cut-out_requirement_demo.jpeg", input: "Quantity")
-Requirement.create!(name: "Polished cut-out", photo: "polished_cut-out_requirement_demo.jpeg", input: "Quantity")
-Requirement.create!(name: "Set of grooves", photo: "grooves_requirement_demo.jpeg", input: "Quantity")
-Requirement.create!(name: "Upstand", photo: "upstand_requirement_demo.jpeg", input: "Size")
-Requirement.create!(name: "Splashback", photo: "splashback_requirement_demo.jpeg", input: "Size")
-Requirement.create!(name: "Window sill", photo: "window_sill_requirement_demo.jpeg", input: "Size")
-Requirement.create!(name: "Recessed drainer", photo: "recessed_drainer_requirement_demo.jpeg", input: "Quantity")
+Requirement.create!(name: "Worktop", photo: "worktop_requirement_demo.jpg", input: "Size")
+Requirement.create!(name: "Island", photo: "island_requirement_demo.jpg", input: "Size")
+Requirement.create!(name: "Waterfall Edge", photo: "waterfall_edge_requirement_demo.jpg", input: "Quantity")
+Requirement.create!(name: "Unpolished cut-out", photo: "unpolished_cut-out_requirement_demo.jpg", input: "Quantity")
+Requirement.create!(name: "Tap cut-out", photo: "tap_cut-out_requirement_demo.jpg", input: "Quantity")
+Requirement.create!(name: "Polished cut-out", photo: "polished_cut-out_requirement_demo.jpg", input: "Quantity")
+Requirement.create!(name: "Set of grooves", photo: "grooves_requirement_demo.jpg", input: "Quantity")
+Requirement.create!(name: "Upstand", photo: "upstand_requirement_demo.jpg", input: "Size")
+Requirement.create!(name: "Splashback", photo: "splashback_requirement_demo.jpg", input: "Size")
+Requirement.create!(name: "Window sill", photo: "window_sill_requirement_demo.jpg", input: "Size")
+Requirement.create!(name: "Recessed drainer", photo: "recessed_drainer_requirement_demo.jpg", input: "Quantity")
 
 # GalleryItem.create!(photos: "Gallery_image_1.jpeg")
 # GalleryItem.create!(photos: "Gallery_image_2.jpeg")
