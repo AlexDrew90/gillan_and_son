@@ -30,7 +30,7 @@
 <div class="quote-build-wrapper">
   <div class="quote-build-left">
     <% @requirements.each do |requirement|  %>
-      <% photo_path = asset_path(requirement.photo).sub(/\.jpeg\z/i, '.jpg') %>
+      <% photo_path = Rails.application.assets.find_asset(requirement.photo) ? asset_path(requirement.photo) : asset_path(requirement.photo.sub(/\.jpeg\z/i, '.jpg')) %>
       <div class="requirement"
            data-name="<%= requirement.name.gsub(' ', '-') %>"
            data-input="<%= requirement.input %>"
@@ -50,7 +50,7 @@
     <p>Please select some requirements</p>
     <div class="requirement-demo-slideshow-container">
       <% @requirements.each do |requirement|  %>
-        <% photo_path = asset_path(requirement.photo).sub(/\.jpeg\z/i, '.jpg') %>
+        <% photo_path = Rails.application.assets.find_asset(requirement.photo) ? asset_path(requirement.photo) : asset_path(requirement.photo.sub(/\.jpeg\z/i, '.jpg')) %>
         <%= image_tag photo_path, class: 'requirement-demo-slideshow hide-slide-image' %>
       <% end %>
     </div>
