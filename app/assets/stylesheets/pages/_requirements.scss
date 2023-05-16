@@ -258,6 +258,10 @@
   backdrop-filter: blur(15px);
 }
 
+.hide-body-overflow{
+  overflow: hidden;
+}
+
 @media (max-width: 767px) {
 
   .requirement{
