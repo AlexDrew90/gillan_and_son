@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="requirement"
 window.selectedRequirmentArray = [];
 window.multipleRequirmentArray = [];
+let docBody = document.body;
 
 const quantityInput = document.createElement("input");
     quantityInput.setAttribute("type", "number");
@@ -95,6 +96,7 @@ export default class extends Controller {
 
         //close function
         closeBtn.onclick = () => {
+          body.classList.remove("hide-body-overflow");
           modal.remove();
         };
       };
@@ -148,6 +150,8 @@ export default class extends Controller {
       });
 
       if (allFieldsCompleted) {
+
+      body.classList.add("hide-body-overflow");
 
       // Creating a modal
 
@@ -230,6 +234,7 @@ export default class extends Controller {
           reviewModalDiv.appendChild(requestQuoteButton);
         //close function
         closeBtn.onclick = () => {
+          body.classList.remove("hide-body-overflow");
           reviewModalDiv.remove();
           modalBackground.remove();
         };
@@ -281,7 +286,7 @@ export default class extends Controller {
     closeBtn.onclick = () => {
       parentContainer.remove();
       let modalBackground = document.getElementById("bg");
-      console.log(modalBackground);
+      body.classList.remove("hide-body-overflow");
       modalBackground.remove();
     };
   }
