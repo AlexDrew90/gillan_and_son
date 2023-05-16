@@ -285,7 +285,7 @@ export default class extends Controller {
     //close function
     closeBtn.onclick = () => {
       parentContainer.remove();
-      body.classList.remove("hide-body-overflow");
+      docBody.classList.remove("hide-body-overflow");
       let modalBackground = document.getElementById("bg");
       modalBackground.remove();
     };
