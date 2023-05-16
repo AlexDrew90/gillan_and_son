@@ -96,7 +96,7 @@ export default class extends Controller {
 
         //close function
         closeBtn.onclick = () => {
-          body.classList.remove("hide-body-overflow");
+          docBody.classList.remove("hide-body-overflow");
           modal.remove();
         };
       };
@@ -151,7 +151,7 @@ export default class extends Controller {
 
       if (allFieldsCompleted) {
 
-      body.classList.add("hide-body-overflow");
+      docBody.classList.add("hide-body-overflow");
 
       // Creating a modal
 
@@ -234,7 +234,7 @@ export default class extends Controller {
           reviewModalDiv.appendChild(requestQuoteButton);
         //close function
         closeBtn.onclick = () => {
-          body.classList.remove("hide-body-overflow");
+          docBody.classList.remove("hide-body-overflow");
           reviewModalDiv.remove();
           modalBackground.remove();
         };
@@ -285,8 +285,8 @@ export default class extends Controller {
     //close function
     closeBtn.onclick = () => {
       parentContainer.remove();
-      let modalBackground = document.getElementById("bg");
       body.classList.remove("hide-body-overflow");
+      let modalBackground = document.getElementById("bg");
       modalBackground.remove();
     };
   }
