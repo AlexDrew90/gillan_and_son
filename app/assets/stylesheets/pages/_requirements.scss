@@ -186,17 +186,18 @@
   background-color: #FDF9FA;
   border: solid #3c035d 2px;
   border-radius: 15px;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow-y: auto !important;
   backdrop-filter: blur(15px);
+  text-align: center;
 
   p{
     padding-top: 0;
     padding-bottom: 0;
     font-size: 1.5rem;
+    text-align: center;
   }
 }
 
