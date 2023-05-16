@@ -168,9 +168,10 @@
 }
 
 #requirement-submit{
-  width: 50%;
   margin-top: 10px;
   cursor: pointer;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .review-modal{
@@ -204,6 +205,7 @@
 .requirement-wrap{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .review-header{
@@ -243,7 +245,7 @@
 }
 
 .user-info-input{
-  width: 80% !important;
+  min-width: 200px;
   margin: 10px;
   font-size: 1.5rem;
 }
