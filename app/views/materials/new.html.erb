@@ -5,7 +5,7 @@
   <%= f.input :name, required: true %>
   <%= f.association :brand, collection: Brand.all, prompt: 'Select a Brand', required: true %>
   <%= f.input :material_type, collection: Material::MATERIAL_TYPES, prompt: 'Select a Material Type', required: true %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "button-primary" %>
 <% end %>
   <br>
   <%= link_to "Back to admin homepage", cms_path %>
