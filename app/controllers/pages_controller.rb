@@ -13,5 +13,6 @@ class PagesController < ApplicationController
     @reviews = Review.all
     @materials = Material.all
     @brands = Brand.all
+    @staffmembers = StaffMember.all
   end
 end

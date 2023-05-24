@@ -77,6 +77,16 @@
 
    <div class="staff-cms hidden-cms" data-cms-toggle-target="staff">
    <h3>Staff members</h3>
+  <br>
+  <p>Or select an existing staff member that you wish to amend or delete:</p>
+  <br>
+    <% @staffmembers.each do |staff| %>
+      <div class="review-item">
+        <p><%= staff.name %></p>
+        <p><%= staff.job_title %></p>
+      </div>
+      <br>
+    <% end %>
   </div>
 
    <div class="requirements-cms hidden-cms" data-cms-toggle-target="requirements">
