@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Rails app for a small business offering Kitchen Worktops in the Northwest of England.
+
+Currently hosted at: gillan-and-son.herokuapp.com
